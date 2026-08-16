@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zona Estudiantes | Col. J.F.B.</title>
+    <link rel="icon" type="image/png" href="imagenes/Escudo transparente.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="script.js">
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER / MENÚ
+===================================================== -->
+<header class="header">
+    <div class="logo">
+        <span>🎓</span>
+        <div>
+            <h1>Zona Estudiantes</h1>
+            <p>Col. J.F.B.</p>
+        </div>
+    </div>
+    <button
+        class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰
+    </button>
+
+    <nav id="navMenu">
+        <a href="#inicio">Inicio</a>
+        <a href="#centro">Centro de Estudiantes</a>
+        <a href="#destacados">Destacados</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#galeria">Galería</a>
+        <a href="#biblioteca">Biblioteca</a>
+
+        <!-- BOTÓN VOLVER A INICIO -->
+        <a href="index.html" class="nav-volver">
+            ← Volver a Inicio
+        </a>
+    </nav>
+</header>
+
+<!-- =====================================================
+     INICIO
+===================================================== -->
+<section id="inicio" class="hero">
+    <div class="hero-content">
+        <div class="hero-text">
+            <span class="etiqueta">
+                ESPACIO ESTUDIANTIL
+            </span>
+            <h2>
+                Bienvenidos a la
+                <strong>Zona Estudiantes</strong>
+            </h2>
+            <p>
+                Un espacio creado para compartir información,
+                actividades, horarios, biblioteca digital y
+                momentos destacados de nuestra comunidad educativa.
+            </p>
+            <a href="#galeria" class="btn">"Galeria de fotos"</a>
+            <a href="#horarios" class="btn">"Horarios"</a>
+        </div>
+        <div class="hero-image">
+            <img
+                src="Imagenes/Portada.jpg"
+                alt="Zona Estudiantes">
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     CENTRO DE ESTUDIANTES
+===================================================== -->
+<section id="centro" class="section">
+    <div class="section-title">
+        <h2>Centro de Estudiantes</h2>
+        <p>
+            Representación y participación estudiantil
+        </p>
+    </div>
+    <div class="student-carousel">
+        <button
+            class="carousel-arrow prev"
+            id="centroPrev"
+            aria-label="Estudiante anterior">
+            ❮
+        </button>
+        <div class="student-carousel-window" id="centroWindow">
+            <div class="student-carousel-track" id="centroTrack">
+
+                <!-- ESTUDIANTE 1 -->
+                <div class="student-slide">
+                    <div class="student-card">
+                        <div class="student-photo">
+                            <img
+                                src="img/centro-estudiantes.jpg"
+                                alt="Presidente del Centro de Estudiantes">
+                        </div>
+                        <div class="student-info">
+                            <span class="student-label">
+                                CENTRO DE ESTUDIANTES
+                            </span>
+                            <h3>Jhonatan Daniel Menacho</h3>
+                            <div class="student-data">
+                                <p>
+                                    <strong>🎓 Cargo:</strong>
+                                    Presidente
+                                </p>
+                                <p>
+                                    <strong>🏫 Curso:</strong>
+                                    6to B
+                                </p>
+                            </div>
+                            <div class="student-message">
+                                <span>💬 Mensaje para el colegio</span>
+                                <p>
+                                    "Trabajemos juntos por un colegio
+                                    donde todos los estudiantes podamos
+                                    participar, aprender y construir un
+                                    mejor futuro."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ESTUDIANTE 2 -->
+                <div class="student-slide">
+                    <div class="student-card">
+                        <div class="student-photo">
+                            <img
+                                src="img/centro-estudiantes2.jpg"
+                                alt="Vicepresidente del Centro de Estudiantes">
+                        </div>
+                        <div class="student-info">
+                            <span class="student-label">
+                                CENTRO DE ESTUDIANTES
+                            </span>
+                            <h3>Nombre del estudiante</h3>
+                            <div class="student-data">
+                                <p>
+                                    <strong>🎓 Cargo:</strong>
+                                    Vicepresidente
+                                </p>
+                                <p>
+                                    <strong>🏫 Curso:</strong>
+                                    6to A
+                                </p>
+                            </div>
+                            <div class="student-message">
+                                <span>💬 Mensaje para el colegio</span>
+                                <p>
+                                    "Con unidad, respeto y compromiso
+                                    podemos hacer de nuestra institución
+                                    un lugar cada día mejor."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ESTUDIANTE 3 -->
+                <div class="student-slide">
+                    <div class="student-card">
+                        <div class="student-photo">
+                            <img
+                                src="img/centro-estudiantes3.jpg"
+                                alt="Secretario del Centro de Estudiantes">
+                        </div>
+                        <div class="student-info">
+                            <span class="student-label">
+                                CENTRO DE ESTUDIANTES
+                            </span>
+                            <h3>Nombre del estudiante</h3>
+                            <div class="student-data">
+                                <p>
+                                    <strong>🎓 Cargo:</strong>
+                                    Secretario/a
+                                </p>
+                                <p>
+                                    <strong>🏫 Curso:</strong>
+                                    5to B
+                                </p>
+                            </div>
+                            <div class="student-message">
+                                <span>💬 Mensaje para el colegio</span>
+                                <p>
+                                    "Sigamos creciendo como comunidad
+                                    estudiantil, apoyándonos y dando lo
+                                    mejor de nosotros cada día."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button
+            class="carousel-arrow next"
+            id="centroNext"
+            aria-label="Siguiente estudiante">
+            ❯
+        </button>
+    </div>
+    <div class="carousel-dots" id="centroDots"></div>
+</section>
+
+<!-- =====================================================
+     ESTUDIANTES DESTACADOS
+===================================================== -->
+<section id="destacados" class="section dark-section">
+    <div class="section-title">
+        <h2>Estudiantes Destacados</h2>
+        <p>Reconocemos el esfuerzo y la dedicación</p>
+    </div>
+    <div class="destacado-card">
+        <div class="destacado-image">
+            <img
+                src="Imagenes/mejores.png"
+                alt="Estudiantes destacados">
+        </div>
+        <div class="destacado-info">
+            <span class="reconocimiento">
+                🏆 RECONOCIMIENTO
+            </span>
+            <h3>
+                Nuestros estudiantes destacados
+            </h3>
+            <p class="nombres">
+                1° Dahiana Michelle Checa Lupa <br>
+                2° Mibia Yubiza Llanos Flores <br>               
+                3° Nuestros estudiantes destacados
+            </p>
+            <h4>
+                
+            </h4>
+            <p>
+                “Hoy celebramos el esfuerzo, la dedicación y la 
+                perseverancia de nuestros estudiantes destacados por 
+                curso. Cada uno de sus logros es el resultado de horas de
+                estudio, responsabilidad y el deseo de superarse cada día. 
+                Este reconocimiento es para ustedes, porque con su esfuerzo nos
+                demuestran que cada pequeño paso puede convertirse en un gran logro.” <br>
+                🥇 <strong>Primer lugar: Curso 1° B</strong> Por su excelente desempeño y constancia. <br>
+                🥈 <strong>Segundo lugar: Curso 3° A</strong> Por su dedicación y compromiso. <br>
+                🥉 <strong>Tercer lugar:</strong> Por su perseverancia y espíritu de superación. <br>
+                🌟 ¡Sigan adelante, porque cada esfuerzo de hoy construye el éxito de mañana!
+            </p>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     HORARIOS
+===================================================== -->
+<section id="horarios" class="section">
+    <div class="section-title">  
+        <h2>Horarios de Clases</h2>
+        <p>Consulta el horario correspondiente a tu curso</p>
+    </div>
+    <div class="horario-box">
+        <label for="curso">
+            Selecciona tu curso:
+        </label>
+        <select id="curso">
+            <option value="">
+                -- Seleccionar curso --
+            </option>
+
+            <option value="1a">1ro A</option>
+            <option value="1b">1ro B</option>
+            <option value="1c">1ro C</option>
+
+            <option value="2a">2do A</option>
+            <option value="2b">2do B</option>
+            <option value="2c">2do C</option>
+
+            <option value="3a">3ro A</option>
+            <option value="3b">3ro B</option>
+            <option value="3c">3ro C</option>
+
+            <option value="4a">4to A</option>
+            <option value="4b">4to B</option>
+            <option value="4c">4to C</option>
+
+            <option value="5a">5to A</option>
+            <option value="5b">5to B</option>
+            <option value="5c">5to C</option>
+
+            <option value="6a">6to A</option>
+            <option value="6b">6to B</option>
+            <option value="6c">6to C</option>
+
+        </select>
+
+        <div id="horarioResultado" class="horario-resultado">
+            <p>Selecciona un curso para visualizar su horario.</p>
+        </div>
+    </div>
+</section>
+
+<!-- =====================================================
+     GALERÍA
+===================================================== -->
+<section id="galeria" class="section dark-section">
+    <div class="section-title">       
+        <h2>Galería Estudiantil</h2>
+        <p>
+            Momentos y actividades de nuestra institución
+        </p>
+    </div>
+    <div class="photo-carousel">
+        
+        <div class="photo-window" id="galeriaWindow">
+            <div class="photo-track" id="galeriaTrack">
+                <div class="photo-slide">
+                    <img src="Imagenes/Escudo transparente.png" alt="Actividad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen.jpg"
+                        alt="Actividad escolar">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen1.jpg"
+                        alt="Actividad educativa">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen2.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen3.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen4.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen5.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen6.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen7.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen8.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen9.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen10.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen11.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen12.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen13.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen14.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+                <div class="photo-slide">
+                    <img
+                        src="fotos galeria/imagen15.jpg"
+                        alt="Comunidad estudiantil">
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="carousel-dots" id="galeriaDots"></div>
+    <p class="gallery-help">
+        👆 Haz clic en la imagen para verla en pantalla completa
+    </p>
+</section>
+
+<!-- =====================================================
+     BIBLIOTECA DIGITAL
+===================================================== -->
+<section id="biblioteca" class="section">
+    <div class="section-title">   
+        <h2>Biblioteca Digital</h2>
+        <p>Busca libros por nombre o autor</p>
+    </div>
+    <div class="buscador">
+        <input
+            type="text"
+            id="busqueda"
+            placeholder="🔎 Buscar por nombre o autor..."
+            autocomplete="off">
+    </div>
+    <div id="listaLibros" class="lista-libros">
+
+        <!-- LIBRO 1 -->
+        <article
+            class="libro"
+            data-titulo="Creacion del Colegio"
+            data-autor="fundacion">
+            <div class="portada">
+                <img
+                    src="Imagenes/frontis.png"
+                    alt="Creacion del Colegio">
+            </div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Reseña Historica
+                </span>
+                <h3>
+                    Creacion del Col. J. F. B.
+                </h3>
+                <p><strong>Autor:</strong></p>
+                <p class="descripcion">
+                    Descubre como fue fundado el Colegio "Juan Francisco Bohórquez"
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/CREACIÓN DE NUESTRO COLEGIO.pdf"
+                        download
+                        class="btn-pdf">
+                        📥 Descargar PDF
+                    </a> 
+                </div>
+            </div>
+        </article>
+
+        <!-- LIBRO 2 -->
+        <article
+            class="libro"
+            data-titulo="banda"
+            data-autor="fundacion">
+            <div class="portada">
+                <img
+                    src="Imagenes/banda.jpg"
+                    alt="Creacion banda de musica">
+            </div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Reseña Historica
+                </span>
+                <h3>
+                    Creacion de la Banda de Música del Col. J.F.B.
+                </h3>
+                <p><strong>Autor:</strong></p>
+                <p class="descripcion">
+                    Descubre como fue creado la banda de música del Colegio "Juan Francisco Bohórquez"
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/CREACIÓN DE LA BANDA DE GUERRA.pdf"
+                        download
+                        class="btn-pdf">
+                        📥 Descargar PDF
+                    </a> 
+                </div>
+            </div>
+        </article>
+
+        <!-- LIBRO 3 -->
+        <article
+            class="libro"
+            data-titulo="himno"
+            data-autor="himno">
+            <div class="portada">
+                <img
+                    src="Imagenes/himno.png"
+                    alt="himno col. J.F.B.">
+            </div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Himno al Col. J.F.B.
+                </span>
+                <h3>
+                    Himno al Col. J.F.B.
+                </h3>
+                <p><strong>Autor:</strong></p>
+                <p class="descripcion">
+                    Descubre la letra del Himno al Colegio "Juan Francisco Bohórquez"
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/HIMNO AL COLEGIO.pdf"
+                        download
+                        class="btn-pdf">
+                        📥 Descargar PDF
+                    </a> 
+                </div>
+            </div>
+        </article>
+
+        <!-- LIBRO 4 -->
+        <article
+            class="libro"
+            data-titulo="reglamento"
+            data-autor="interno">
+            <div class="portada">
+                <img
+                    src="Imagenes/reglamento.png"
+                    alt="Reglamento del Col. J.F.B.">
+            </div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Documento
+                </span>
+                <h3>
+                    Reglamento Interno del Col. J.F.B.
+                </h3>
+                <p><strong>Autor:</strong></p>
+                <p class="descripcion">
+                    Conoce las normas, respeta a los demás y construyamos juntos un mejor colegio.
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/REGLAMENTO INTERNO DEL COLEGIO BOHORQUEZ.pdf"
+                        download
+                        class="btn-pdf">
+                        📥 Descargar PDF
+                    </a> 
+                </div>
+            </div>
+        </article>
+
+        <!-- LIBRO 5 -->
+        <article
+            class="libro"
+            data-titulo="texto ministerio"
+            data-autor="primero">
+            <div class="portada">
+                <img src="Imagenes/primero.jpg" alt="texto ministerio"></div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Texto Ministerio de Educación 2025
+                </span>
+                <h3>1° Secundaria</h3>
+                <p>
+                    <strong>Autor:</strong>                    
+                </p>
+                <p class="descripcion">
+                    Texto del Ministerio de Educacion de 1° de secundaria 
+                    correspondiente a la gestion 2025.
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/primero/1ro año de escolaridad [2025].pdf"
+                        download class="btn-pdf">
+                        📥 Texto Principal</a>
+                    <a
+                        href="documentos/primero/Artes Plásticas y Visuales.pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 A. Plasticas
+                    <a
+                        href="documentos/primero/Cosmovisiones, Filosofía y Psicología.pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Filosofía - Psicología
+                    <a
+                        href="documentos/primero/Educación Musical.pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Música
+                    <a
+                        href="documentos/primero/Lengua Extranjera Inglés.pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Ingles
+                    <a
+                        href="documentos/primero/Técnica Tecnológica General.pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 T. Tecnología
+                    <a
+                        href="documentos/primero/Valores, Espiritualidades y Religiones.pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Religión
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- LIBRO 6 -->
+        <article
+            class="libro"
+            data-titulo="texto ministerio"
+            data-autor="segundo">
+            <div class="portada">
+                <img src="Imagenes/segundo.jpg" alt="texto ministerio"></div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Texto Ministerio de Educación 2025
+                </span>
+                <h3>2° Secundaria</h3>
+                <p>
+                    <strong>Autor:</strong>                    
+                </p>
+                <p class="descripcion">
+                    Texto del Ministerio de Educacion de 2° de secundaria 
+                    correspondiente a la gestion 2025.
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/segundo/2do año de escolaridad [2025].pdf"
+                        download class="btn-pdf">
+                        📥 Texto Principal</a>
+                    <a
+                        href="documentos/segundo/2do año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 A. Plasticas
+                    <a
+                        href="documentos/segundo/2do año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Filosofía - Psicología
+                    <a
+                        href="documentos/segundo/2do año de escolaridad - Educación Musical [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Música
+                    <a
+                        href="documentos/segundo/2do año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Ingles
+                    <a
+                        href="documentos/segundo/2do año de escolaridad - Técnica Tecnológica General [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 T. Tecnología
+                    <a
+                        href="documentos/segundo/2do año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Religión
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- LIBRO 7 -->
+        <article
+            class="libro"
+            data-titulo="texto ministerio"
+            data-autor="tercero">
+            <div class="portada">
+                <img src="Imagenes/tercero.jpg" alt="texto ministerio"></div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Texto Ministerio de Educación 2025
+                </span>
+                <h3>3° Secundaria</h3>
+                <p>
+                    <strong>Autor:</strong>                    
+                </p>
+                <p class="descripcion">
+                    Texto del Ministerio de Educacion de 3° de secundaria 
+                    correspondiente a la gestion 2025.
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/tercero/3er año de escolaridad [2025].pdf"
+                        download class="btn-pdf">
+                        📥 Texto Principal</a>
+                    <a
+                        href="documentos/tercero/3er año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 A. Plasticas
+                    <a
+                        href="documentos/tercero/3er año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Filosofía - Psicología
+                    <a
+                        href="documentos/tercero/3er año de escolaridad - Educación Musical [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Música
+                    <a
+                        href="documentos/tercero/3er año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Ingles
+                    <a
+                        href="documentos/tercero/3er año de escolaridad - Técnica Tecnológica General [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 T. Tecnología
+                    <a
+                        href="documentos/tercero/3er año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Religión
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- LIBRO 8 -->
+        <article
+            class="libro"
+            data-titulo="texto ministerio"
+            data-autor="cuarto">
+            <div class="portada">
+                <img src="Imagenes/cuarto.jpg" alt="texto ministerio"></div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Texto Ministerio de Educación 2025
+                </span>
+                <h3>4° Secundaria</h3>
+                <p>
+                    <strong>Autor:</strong>                    
+                </p>
+                <p class="descripcion">
+                    Texto del Ministerio de Educacion de 4° de secundaria 
+                    correspondiente a la gestion 2025.
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/cuarto/4to año de escolaridad [2025].pdf"
+                        download class="btn-pdf">
+                        📥 Texto Principal</a>
+                    <a
+                        href="documentos/cuarto/4to año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 A. Plasticas
+                    <a
+                        href="documentos/cuarto/4to año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Filosofía - Psicología
+                    <a
+                        href="documentos/cuarto/4to año de escolaridad - Educación Musical [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Música
+                    <a
+                        href="documentos/cuarto/4to año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Ingles                    
+                    <a
+                        href="documentos/cuarto/4to año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Religión
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- LIBRO 9 -->
+        <article
+            class="libro"
+            data-titulo="texto ministerio"
+            data-autor="quinto">
+            <div class="portada">
+                <img src="Imagenes/quinto.jpg" alt="texto ministerio"></div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Texto Ministerio de Educación 2025
+                </span>
+                <h3>5° Secundaria</h3>
+                <p>
+                    <strong>Autor:</strong>                    
+                </p>
+                <p class="descripcion">
+                    Texto del Ministerio de Educacion de 5° de secundaria 
+                    correspondiente a la gestion 2025.
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/quinto/5to año de escolaridad [2025].pdf"
+                        download class="btn-pdf">
+                        📥 Texto Principal</a>
+                    <a
+                        href="documentos/quinto/5to año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 A. Plasticas
+                    <a
+                        href="documentos/quinto/5to año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Filosofía - Psicología
+                    <a
+                        href="documentos/quinto/5to año de escolaridad - Educación Musical [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Música
+                    <a
+                        href="documentos/quinto/5to año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Ingles                    
+                    <a
+                        href="documentos/quinto/5to año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Religión
+                    </a>
+                </div>
+            </div>
+        </article>
+
+        <!-- LIBRO 10 -->
+        <article
+            class="libro"
+            data-titulo="texto ministerio"
+            data-autor="sexto">
+            <div class="portada">
+                <img src="Imagenes/sexto.jpg" alt="texto ministerio"></div>
+            <div class="libro-info">
+                <span class="categoria">
+                    Texto Ministerio de Educación 2025
+                </span>
+                <h3>6° Secundaria</h3>
+                <p>
+                    <strong>Autor:</strong>                    
+                </p>
+                <p class="descripcion">
+                    Texto del Ministerio de Educacion de 6° de secundaria 
+                    correspondiente a la gestion 2025.
+                </p>
+                <div class="descargas">
+                    <a
+                        href="documentos/sexto/6to año de escolaridad [2025].pdf"
+                        download class="btn-pdf">
+                        📥 Texto Principal</a>
+                    <a
+                        href="documentos/sexto/6to año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 A. Plasticas
+                    <a
+                        href="documentos/sexto/6to año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Filosofía - Psicología
+                    <a
+                        href="documentos/sexto/6to año de escolaridad - Educación Musical [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Música
+                    <a
+                        href="documentos/sexto/6to año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Ingles                    
+                    <a
+                        href="documentos/sexto/6to año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
+                        download
+                        class="btn-pdf secundario">
+                        📄 Religión
+                    </a>
+                </div>
+            </div>
+        </article>
+
+
+        <!-- LIBRO 4 
+
+        <article
+            class="libro"
+            data-titulo="Cantar de Mio Cid"
+            data-autor="Anonimo"
+        >
+
+            <div class="portada">
+
+                <img
+                    src="img/libro4.jpg"
+                    alt="Portada Cantar de Mio Cid"
+                >
+
+            </div>
+
+
+            <div class="libro-info">
+
+                <span class="categoria">
+                    LITERATURA
+                </span>
+
+                <h3>
+                    Cantar de Mio Cid
+                </h3>
+
+                <p>
+                    <strong>Autor:</strong>
+                    Anónimo
+                </p>
+
+                <p class="descripcion">
+                    Poema épico medieval castellano.
+                </p>
+
+
+                <div class="descargas">
+
+                    <a
+                        href="pdf/mio-cid.pdf"
+                        download
+                        class="btn-pdf"
+                    >
+                        📥 Descargar PDF
+                    </a>
+
+                    <a
+                        href="pdf/mio-cid-1.pdf"
+                        download
+                        class="btn-pdf secundario"
+                    >
+                        📄 PDF Alternativo
+                    </a>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+
+    <div
+        id="sinResultados"
+        class="sin-resultados"
+    >
+
+        <h3>
+            📚 No se encontraron libros
+        </h3>
+
+        <p>
+            Intenta buscar utilizando el nombre del libro o autor.
+        </p>
+
+    </div> -->
+
+</section> 
+
+<!-- =====================================================
+     MODAL PARA IMÁGENES
+===================================================== -->
+<div id="modalImagen" class="modal">
+    <button
+        class="cerrar-modal"
+        id="cerrarModal"
+        aria-label="Cerrar imagen">
+        ×
+    </button>
+    <img id="imagenModal" src="" alt="Imagen ampliada">
+</div>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+<footer>
+    <div class="footer-content">
+        <div>
+            <h3>Zona Estudiantes</h3>
+            <p>Col. Juan Francisco Bohórquez</p>
+        </div>
+        <div>
+            <p>Gestión 2026</p>
+            <p>Educación • Valores • Futuro</p>
+        </div>
+    </div>
+    <div class="copyright">
+        © 2026 Col. J.F.B. — JhonatanDM
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
