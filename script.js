@@ -901,3 +901,22 @@ document.querySelectorAll("img")
         );
 
     });
+
+
+
+    /* =====================================================
+   PDF PARA APK / WEBVIEW
+===================================================== */
+
+document.querySelectorAll(".btn-pdf").forEach(boton => {
+
+    boton.addEventListener("click", function () {
+
+        const url = this.href;
+
+        // Permite que el PDF se abra como archivo externo
+        window.open(url, "_blank");
+
+    });
+
+});
