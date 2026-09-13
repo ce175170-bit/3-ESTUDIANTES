@@ -3,2058 +3,1399 @@
 ===================================================== */
 
 :root {
-
-    --verde: #0a3d1e;
-    --verde-claro: #145c31;
-    --verde-brillante: #278047;
-
-    --negro: #030604;
-    --negro-2: #080d0a;
-
-    --blanco: #ffffff;
-
-    --gris: #cbd5ce;
-
+  --verde: #0a3d1e;
+  --verde-claro: #145c31;
+  --verde-brillante: #278047;
+  --negro: #030604;
+  --negro-2: #080d0a;
+  --blanco: #ffffff;
+  --gris: #cbd5ce;
 }
-
 
 /* =====================================================
    RESET
 ===================================================== */
-
 * {
-
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-
 html {
-
-    scroll-behavior: smooth;
-
+  scroll-behavior: smooth;
 }
-
-
 body {
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
-    background:
-        var(--negro);
-
-    color:
-        var(--blanco);
-
-    line-height: 1.6;
-
-    overflow-x: hidden;
-
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--negro);
+  color: var(--blanco);
+  line-height: 1.6;
+  overflow-x: hidden;
 }
-
-
 img {
-
-    max-width: 100%;
-
-    display: block;
-
+  max-width: 100%;
+  display: block;
 }
-
-
 button,
 select,
 input {
-
-    font-family: inherit;
-
+  font-family: inherit;
 }
-
-
 a {
-
-    text-decoration: none;
-
-    color: inherit;
-
+  text-decoration: none;
+  color: inherit;
 }
-
 
 /* =====================================================
    HEADER
 ===================================================== */
-
 .header {
+  position: sticky;
 
-    position: sticky;
+  top: 0;
 
-    top: 0;
+  z-index: 1000;
 
-    z-index: 1000;
+  min-height: 78px;
 
-    min-height: 78px;
+  padding: 12px 5%;
 
-    padding:
-        12px 5%;
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
+  justify-content: space-between;
 
-    justify-content: space-between;
+  background: linear-gradient(90deg, #030604, #0a3d1e);
 
-    background:
-        linear-gradient(
-            90deg,
-            #030604,
-            #0a3d1e
-        );
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 
-    border-bottom:
-        1px solid
-        rgba(255,255,255,.15);
-
-    box-shadow:
-        0 8px 30px
-        rgba(0,0,0,.45);
-
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
-
 
 .logo {
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
-
-    gap: 12px;
-
+  gap: 12px;
 }
-
 
 .logo > span {
+  width: 46px;
 
-    width: 46px;
+  height: 46px;
 
-    height: 46px;
+  display: grid;
 
-    display: grid;
+  place-items: center;
 
-    place-items: center;
+  border-radius: 50%;
 
-    border-radius: 50%;
+  background: var(--blanco);
 
-    background:
-        var(--blanco);
+  color: var(--verde);
 
-    color:
-        var(--verde);
-
-    font-size: 23px;
-
+  font-size: 23px;
 }
-
 
 .logo h1 {
-
-    font-size: 20px;
-
+  font-size: 20px;
 }
-
 
 .logo p {
+  color: #aebdb4;
 
-    color:
-        #aebdb4;
+  font-size: 11px;
 
-    font-size: 11px;
-
-    text-transform: uppercase;
-
+  text-transform: uppercase;
 }
-
 
 /* =====================================================
    MENÚ
 ===================================================== */
 
 nav {
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
-
-    gap: 3px;
-
+  gap: 3px;
 }
-
 
 nav a {
+  padding: 10px 12px;
 
-    padding:
-        10px 12px;
+  border-radius: 7px;
 
-    border-radius: 7px;
+  font-size: 13px;
 
-    font-size: 13px;
-
-    transition:
-        .3s ease;
-
+  transition: 0.3s ease;
 }
-
 
 nav a:hover {
+  background: var(--blanco);
 
-    background:
-        var(--blanco);
-
-    color:
-        var(--verde);
-
+  color: var(--verde);
 }
-
-
-
-
-
 
 /* BOTÓN VOLVER A INICIO */
 
 nav .nav-volver {
+  margin-left: 7px;
 
-    margin-left: 7px;
+  background: var(--blanco);
 
-    background:
-        var(--blanco);
+  color: var(--verde);
 
-    color:
-        var(--verde);
-
-    font-weight: bold;
-
+  font-weight: bold;
 }
-
 
 nav .nav-volver:hover {
+  background: #dce8e0;
 
-    background:
-        #dce8e0;
-
-    color:
-        #062a15;
-
+  color: #062a15;
 }
-
 
 .menu-btn {
+  display: none;
 
-    display: none;
+  width: 44px;
 
-    width: 44px;
+  height: 44px;
 
-    height: 44px;
+  border: none;
 
-    border: none;
+  border-radius: 8px;
 
-    border-radius: 8px;
+  background: var(--blanco);
 
-    background:
-        var(--blanco);
+  color: var(--verde);
 
-    color:
-        var(--verde);
+  font-size: 25px;
 
-    font-size: 25px;
-
-    cursor: pointer;
-
+  cursor: pointer;
 }
-
 
 /* =====================================================
    HERO
 ===================================================== */
 
 .hero {
+  min-height: 650px;
 
-    min-height: 650px;
+  padding: 80px 5%;
 
-    padding:
-        80px 5%;
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
-
-    background:
-
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(20,92,49,.35),
-            transparent 35%
-        ),
-
-        var(--negro);
-
+  background:
+    radial-gradient(circle at 80% 20%, rgba(20, 92, 49, 0.35), transparent 35%),
+    var(--negro);
 }
-
 
 .hero-content {
+  width: 100%;
 
-    width: 100%;
+  max-width: 1250px;
 
-    max-width: 1250px;
+  margin: auto;
 
-    margin: auto;
+  display: grid;
 
-    display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    grid-template-columns:
-        1fr 1fr;
+  gap: 60px;
 
-    gap: 60px;
-
-    align-items: center;
-
+  align-items: center;
 }
-
 
 .hero-text .etiqueta {
+  display: inline-block;
 
-    display: inline-block;
+  padding: 7px 14px;
 
-    padding:
-        7px 14px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
 
-    border:
-        1px solid
-        rgba(255,255,255,.25);
+  border-radius: 50px;
 
-    border-radius: 50px;
+  font-size: 12px;
 
-    font-size: 12px;
-
-    margin-bottom: 18px;
-
+  margin-bottom: 18px;
 }
-
 
 .hero h2 {
+  font-size: clamp(40px, 6vw, 72px);
 
-    font-size:
-        clamp(40px, 6vw, 72px);
+  line-height: 1.05;
 
-    line-height: 1.05;
-
-    margin-bottom: 25px;
-
+  margin-bottom: 25px;
 }
-
 
 .hero h2 strong {
+  display: block;
 
-    display: block;
-
-    color:
-        #59aa72;
-
+  color: #59aa72;
 }
-
 
 .hero p {
+  max-width: 600px;
 
-    max-width: 600px;
+  color: #c5cec8;
 
-    color:
-        #c5cec8;
+  font-size: 17px;
 
-    font-size: 17px;
-
-    margin-bottom: 30px;
-
+  margin-bottom: 30px;
 }
-
 
 .btn {
+  display: inline-block;
 
-    display: inline-block;
+  padding: 14px 24px;
 
-    padding:
-        14px 24px;
+  border-radius: 8px;
 
-    border-radius: 8px;
+  background: var(--blanco);
 
-    background:
-        var(--blanco);
+  color: var(--verde);
 
-    color:
-        var(--verde);
+  font-weight: bold;
 
-    font-weight: bold;
-
-    transition:
-        .3s;
-
+  transition: 0.3s;
 }
-
 
 .btn:hover {
-
-    transform:
-        translateY(-3px);
-
+  transform: translateY(-3px);
 }
-
 
 .hero-image {
+  overflow: hidden;
 
-    overflow: hidden;
+  border-radius: 18px;
 
-    border-radius: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.12);
 
-    border:
-        2px solid
-        rgba(255,255,255,.12);
-
-    background:
-        #000;
-
+  background: #000;
 }
-
 
 .hero-image img {
+  width: 100%;
 
-    width: 100%;
+  height: auto;
 
-    height: auto;
-
-    object-fit: contain;
-
+  object-fit: contain;
 }
-
 
 /* =====================================================
    SECCIONES
 ===================================================== */
 
 .section {
+  padding: 90px 5%;
 
-    padding:
-        90px 5%;
-
-    background:
-        var(--negro);
-
+  background: var(--negro);
 }
-
 
 .dark-section {
-
-    background:
-
-        linear-gradient(
-            135deg,
-            #030604,
-            #0a3d1e
-        );
-
+  background: linear-gradient(135deg, #030604, #0a3d1e);
 }
-
 
 .section-title {
+  max-width: 900px;
 
-    max-width: 900px;
+  margin: 0 auto 50px;
 
-    margin:
-        0 auto 50px;
-
-    text-align: center;
-
+  text-align: center;
 }
-
 
 .section-title span {
+  color: #62b87b;
 
-    color:
-        #62b87b;
+  font-weight: bold;
 
-    font-weight: bold;
-
-    letter-spacing: 3px;
-
+  letter-spacing: 3px;
 }
-
 
 .section-title h2 {
+  font-size: clamp(30px, 5vw, 48px);
 
-    font-size:
-        clamp(30px, 5vw, 48px);
-
-    margin:
-        8px 0;
-
+  margin: 8px 0;
 }
-
 
 .section-title p {
-
-    color:
-        #bac5be;
-
+  color: #bac5be;
 }
-
 
 /* =====================================================
    CENTRO DE ESTUDIANTES
 ===================================================== */
 
 .student-carousel {
+  position: relative;
 
-    position: relative;
+  width: 100%;
 
-    width: 100%;
+  max-width: 1100px;
 
-    max-width: 1100px;
+  margin: auto;
 
-    margin: auto;
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
-
-    gap: 15px;
-
+  gap: 15px;
 }
-
 
 .student-carousel-window {
+  width: 100%;
 
-    width: 100%;
+  overflow: hidden;
 
-    overflow: hidden;
+  border-radius: 18px;
 
-    border-radius: 18px;
+  background: #000;
 
-    background:
-        #000;
+  border: 2px solid rgba(255, 255, 255, 0.13);
 
-    border:
-        2px solid
-        rgba(255,255,255,.13);
-
-    touch-action: pan-y;
-
+  touch-action: pan-y;
 }
-
 
 .student-carousel-track {
+  display: flex;
 
-    display: flex;
-
-    transition:
-        transform .5s
-        cubic-bezier(.4,0,.2,1);
-
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .student-slide {
+  flex: 0 0 100%;
 
-    flex:
-        0 0 100%;
-
-    min-width:
-        100%;
-
+  min-width: 100%;
 }
-
 
 .student-card {
+  width: 100%;
 
-    width: 100%;
+  min-height: 430px;
 
-    min-height: 430px;
+  display: grid;
 
-    display: grid;
+  grid-template-columns: 42% 58%;
 
-    grid-template-columns:
-        42% 58%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #050806,
-            #0a3d1e
-        );
-
+  background: linear-gradient(135deg, #050806, #0a3d1e);
 }
-
 
 .student-photo {
+  min-height: 430px;
 
-    min-height: 430px;
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
+  justify-content: center;
 
-    justify-content: center;
+  background: #000;
 
-    background:
-        #000;
-
-    overflow: hidden;
-
+  overflow: hidden;
 }
-
 
 .student-photo img {
+  width: 100%;
 
-    width: 100%;
+  height: 100%;
 
-    height: 100%;
+  min-height: 430px;
 
-    min-height: 430px;
+  object-fit: contain;
 
-    object-fit: contain;
+  cursor: zoom-in;
 
-    cursor: zoom-in;
-
-    transition:
-        transform .4s ease;
-
+  transition: transform 0.4s ease;
 }
-
 
 .student-photo img:hover {
-
-    transform:
-        scale(1.03);
-
+  transform: scale(1.03);
 }
-
 
 .student-info {
+  padding: 45px;
 
-    padding:
-        45px;
+  display: flex;
 
-    display: flex;
+  flex-direction: column;
 
-    flex-direction: column;
-
-    justify-content: center;
-
+  justify-content: center;
 }
-
 
 .student-label {
+  display: inline-block;
 
-    display: inline-block;
+  width: fit-content;
 
-    width: fit-content;
+  padding: 6px 12px;
 
-    padding:
-        6px 12px;
+  margin-bottom: 15px;
 
-    margin-bottom: 15px;
+  border-radius: 30px;
 
-    border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
 
-    background:
-        rgba(255,255,255,.1);
+  color: #8ad09c;
 
-    color:
-        #8ad09c;
+  font-size: 11px;
 
-    font-size: 11px;
+  font-weight: bold;
 
-    font-weight: bold;
-
-    letter-spacing: 1.5px;
-
+  letter-spacing: 1.5px;
 }
-
 
 .student-info h3 {
+  font-size: clamp(25px, 3vw, 38px);
 
-    font-size:
-        clamp(25px, 3vw, 38px);
+  line-height: 1.15;
 
-    line-height: 1.15;
-
-    margin-bottom: 22px;
-
+  margin-bottom: 22px;
 }
-
 
 .student-data {
+  display: grid;
 
-    display: grid;
+  gap: 10px;
 
-    gap: 10px;
-
-    margin-bottom: 25px;
-
+  margin-bottom: 25px;
 }
-
 
 .student-data p {
+  color: #d1dad4;
 
-    color:
-        #d1dad4;
-
-    font-size: 15px;
-
+  font-size: 15px;
 }
-
 
 .student-data strong {
-
-    color:
-        white;
-
+  color: white;
 }
-
 
 .student-message {
+  padding: 18px;
 
-    padding:
-        18px;
+  border-left: 4px solid #67b97f;
 
-    border-left:
-        4px solid
-        #67b97f;
+  background: rgba(0, 0, 0, 0.25);
 
-    background:
-        rgba(0,0,0,.25);
-
-    border-radius:
-        0 10px 10px 0;
-
+  border-radius: 0 10px 10px 0;
 }
-
 
 .student-message span {
+  display: block;
 
-    display: block;
+  margin-bottom: 8px;
 
-    margin-bottom: 8px;
+  color: #78c98d;
 
-    color:
-        #78c98d;
+  font-size: 13px;
 
-    font-size: 13px;
-
-    font-weight: bold;
-
+  font-weight: bold;
 }
-
 
 .student-message p {
+  color: #d1dad4;
 
-    color:
-        #d1dad4;
+  font-size: 14px;
 
-    font-size: 14px;
-
-    font-style: italic;
-
+  font-style: italic;
 }
-
 
 /* =====================================================
    FLECHAS
 ===================================================== */
 
 .carousel-arrow {
+  flex-shrink: 0;
 
-    flex-shrink: 0;
+  width: 48px;
 
-    width: 48px;
+  height: 48px;
 
-    height: 48px;
+  border: none;
 
-    border: none;
+  border-radius: 50%;
 
-    border-radius: 50%;
+  background: var(--blanco);
 
-    background:
-        var(--blanco);
+  color: var(--verde);
 
-    color:
-        var(--verde);
+  font-size: 22px;
 
-    font-size: 22px;
+  cursor: pointer;
 
-    cursor: pointer;
+  display: grid;
 
-    display: grid;
+  place-items: center;
 
-    place-items: center;
+  z-index: 5;
 
-    z-index: 5;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
 
-    box-shadow:
-        0 5px 20px
-        rgba(0,0,0,.5);
-
-    transition:
-        .25s;
-
+  transition: 0.25s;
 }
-
 
 .carousel-arrow:hover {
-
-    transform:
-        scale(1.08);
-
+  transform: scale(1.08);
 }
-
 
 /* =====================================================
    PUNTOS
 ===================================================== */
 
 .carousel-dots {
+  display: flex;
 
-    display: flex;
+  justify-content: center;
 
-    justify-content: center;
+  align-items: center;
 
-    align-items: center;
+  gap: 8px;
 
-    gap: 8px;
-
-    margin-top: 18px;
-
+  margin-top: 18px;
 }
-
 
 .carousel-dot {
+  width: 9px;
 
-    width: 9px;
+  height: 9px;
 
-    height: 9px;
+  border: none;
 
-    border: none;
+  border-radius: 50%;
 
-    border-radius: 50%;
+  background: #526158;
 
-    background:
-        #526158;
-
-    cursor: pointer;
-
+  cursor: pointer;
 }
-
 
 .carousel-dot.active {
+  width: 25px;
 
-    width: 25px;
+  border-radius: 20px;
 
-    border-radius: 20px;
-
-    background:
-        #72c18a;
-
+  background: #72c18a;
 }
-
 
 /* =====================================================
    DESTACADOS
 ===================================================== */
 
 .destacado-card {
+  max-width: 1100px;
 
-    max-width: 1100px;
+  margin: auto;
 
-    margin: auto;
+  display: grid;
 
-    display: grid;
+  grid-template-columns: 1fr 1fr;
 
-    grid-template-columns:
-        1fr 1fr;
+  overflow: hidden;
 
-    overflow: hidden;
+  border-radius: 18px;
 
-    border-radius: 18px;
+  background: #050806;
 
-    background:
-        #050806;
-
-    border:
-        1px solid
-        rgba(255,255,255,.15);
-
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
-
 
 .destacado-image {
+  background: #000;
 
-    background:
-        #000;
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
-
-    justify-content: center;
-
+  justify-content: center;
 }
-
 
 .destacado-image img {
+  width: 100%;
 
-    width: 100%;
+  height: auto;
 
-    height: auto;
+  object-fit: contain;
 
-    object-fit: contain;
-
-    cursor: zoom-in;
-
+  cursor: zoom-in;
 }
-
 
 .destacado-info {
+  padding: 50px;
 
-    padding:
-        50px;
+  display: flex;
 
-    display: flex;
+  flex-direction: column;
 
-    flex-direction: column;
-
-    justify-content: center;
-
+  justify-content: center;
 }
-
 
 .reconocimiento {
+  color: #72c18a;
 
-    color:
-        #72c18a;
+  font-size: 12px;
 
-    font-size: 12px;
+  font-weight: bold;
 
-    font-weight: bold;
+  letter-spacing: 2px;
 
-    letter-spacing: 2px;
-
-    margin-bottom: 15px;
-
+  margin-bottom: 15px;
 }
-
 
 .destacado-info h3 {
-    font-size: 32px;
-    margin-bottom: 15px;
-    
+  font-size: 32px;
+  margin-bottom: 15px;
 }
-
 
 .destacado-info h4 {
+  color: #b8d1bf;
 
-    color:
-        #b8d1bf;
-
-    margin-bottom: 20px;
-    text-align: left;
+  margin-bottom: 20px;
+  text-align: left;
 }
-.nombres{
-    font-size: 20px;
-    font-weight: 500;
-    text-align: left;
-    color: #fff;
+.nombres {
+  font-size: 20px;
+  font-weight: 500;
+  text-align: left;
+  color: #fff;
 }
 .destacado-info p {
-
-    color:
-        #fff;
-        text-align: left;
-        font-weight: 200;
-
+  color: #fff;
+  text-align: left;
+  font-weight: 200;
 }
-
 
 /* =====================================================
    HORARIOS
 ===================================================== */
 
 .horario-box {
+  max-width: 950px;
 
-    max-width: 950px;
+  margin: auto;
 
-    margin: auto;
+  padding: 35px;
 
-    padding:
-        35px;
+  background: #080d0a;
 
-    background:
-        #080d0a;
+  border-radius: 15px;
 
-    border-radius: 15px;
-
-    border:
-        1px solid
-        rgba(255,255,255,.13);
-
+  border: 1px solid rgba(255, 255, 255, 0.13);
 }
-
 
 .horario-box label {
+  display: block;
 
-    display: block;
+  margin-bottom: 10px;
 
-    margin-bottom: 10px;
-
-    font-weight: bold;
-
+  font-weight: bold;
 }
-
 
 select {
+  width: 100%;
 
-    width: 100%;
+  padding: 14px;
 
-    padding:
-        14px;
+  border: none;
 
-    border: none;
+  border-radius: 8px;
 
-    border-radius: 8px;
+  outline: none;
 
-    outline: none;
+  background: var(--verde);
 
-    background:
-        var(--verde);
+  color: white;
 
-    color:
-        white;
+  font-size: 16px;
 
-    font-size: 16px;
-
-    cursor: pointer;
-
+  cursor: pointer;
 }
-
 
 .horario-resultado {
+  margin-top: 30px;
 
-    margin-top: 30px;
-
-    text-align: center;
-
+  text-align: center;
 }
-
 
 .horario-resultado img {
+  width: 100%;
 
-    width: 100%;
+  max-width: 900px;
 
-    max-width: 900px;
+  height: auto;
 
-    height: auto;
+  max-height: 750px;
 
-    max-height: 750px;
+  margin: auto;
 
-    margin: auto;
+  object-fit: contain;
 
-    object-fit: contain;
+  border-radius: 12px;
 
-    border-radius: 12px;
+  background: #000;
 
-    background:
-        #000;
+  border: 2px solid rgba(255, 255, 255, 0.14);
 
-    border:
-        2px solid
-        rgba(255,255,255,.14);
-
-    cursor: zoom-in;
-
+  cursor: zoom-in;
 }
-
 
 /* =====================================================
    GALERÍA
 ===================================================== */
 
 .photo-carousel {
+  position: relative;
 
-    position: relative;
+  width: 100%;
 
-    width: 100%;
+  max-width: 1100px;
 
-    max-width: 1100px;
+  margin: auto;
 
-    margin: auto;
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
-
-    gap: 15px;
-
+  gap: 15px;
 }
-
 
 .photo-window {
+  width: 100%;
 
-    width: 100%;
+  overflow: hidden;
 
-    overflow: hidden;
+  border-radius: 18px;
 
-    border-radius: 18px;
+  background: #000;
 
-    background:
-        #000;
+  border: 2px solid rgba(255, 255, 255, 0.14);
 
-    border:
-        2px solid
-        rgba(255,255,255,.14);
-
-    touch-action: pan-y;
-
+  touch-action: pan-y;
 }
-
 
 .photo-track {
+  display: flex;
 
-    display: flex;
-
-    transition:
-        transform .3s
-        cubic-bezier(.4,0,.2,1);
-
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 
 .photo-slide {
+  flex: 0 0 100%;
 
-    flex:
-        0 0 100%;
+  min-width: 100%;
 
-    min-width:
-        100%;
-
-    background:
-        #000;
-
+  background: #000;
 }
-
 
 .photo-slide img {
+  width: 100%;
 
-    width: 100%;
+  height: auto;
 
-    height: auto;
+  max-height: 650px;
 
-    max-height: 650px;
+  object-fit: contain;
 
-    object-fit: contain;
-
-    cursor: zoom-in;
-
+  cursor: zoom-in;
 }
-
 
 .photo-arrow {
+  flex-shrink: 0;
 
-    flex-shrink: 0;
+  width: 48px;
 
-    width: 48px;
+  height: 48px;
 
-    height: 48px;
+  border: none;
 
-    border: none;
+  border-radius: 50%;
 
-    border-radius: 50%;
+  background: var(--blanco);
 
-    background:
-        var(--blanco);
+  color: var(--verde);
 
-    color:
-        var(--verde);
+  font-size: 22px;
 
-    font-size: 22px;
+  cursor: pointer;
 
-    cursor: pointer;
-
-    z-index: 5;
-
+  z-index: 5;
 }
-
 
 .gallery-help {
+  margin-top: 18px;
 
-    margin-top: 18px;
+  text-align: center;
 
-    text-align: center;
+  color: #aebbb2;
 
-    color:
-        #aebbb2;
-
-    font-size: 13px;
-
+  font-size: 13px;
 }
-
 
 /* =====================================================
    BIBLIOTECA
 ===================================================== */
 
 .buscador {
+  max-width: 850px;
 
-    max-width: 850px;
-
-    margin:
-        0 auto 40px;
-
+  margin: 0 auto 40px;
 }
-
 
 .buscador input {
+  width: 100%;
 
-    width: 100%;
+  padding: 17px 20px;
 
-    padding:
-        17px 20px;
+  border: 2px solid #1a5a32;
 
-    border:
-        2px solid
-        #1a5a32;
+  border-radius: 10px;
 
-    border-radius: 10px;
+  outline: none;
 
-    outline: none;
+  background: #080d0a;
 
-    background:
-        #080d0a;
+  color: white;
 
-    color:
-        white;
-
-    font-size: 16px;
-
+  font-size: 16px;
 }
-
 
 .lista-libros {
+  max-width: 1100px;
 
-    max-width: 1100px;
+  margin: auto;
 
-    margin: auto;
+  display: flex;
 
-    display: flex;
+  flex-direction: column;
 
-    flex-direction: column;
-
-    gap: 20px;
-
+  gap: 20px;
 }
-
 
 .libro {
+  display: grid;
 
-    display: grid;
+  grid-template-columns: 190px 1fr;
 
-    grid-template-columns:
-        190px 1fr;
+  gap: 25px;
 
-    gap: 25px;
+  padding: 20px;
 
-    padding:
-        20px;
+  background: #080d0a;
 
-    background:
-        #080d0a;
+  border: 1px solid rgba(255, 255, 255, 0.12);
 
-    border:
-        1px solid
-        rgba(255,255,255,.12);
-
-    border-radius: 15px;
-
+  border-radius: 15px;
 }
-
 
 .portada {
+  width: 190px;
 
-    width: 190px;
+  min-height: 250px;
 
-    min-height: 250px;
+  display: flex;
 
-    display: flex;
+  align-items: center;
 
-    align-items: center;
+  justify-content: center;
 
-    justify-content: center;
+  overflow: hidden;
 
-    overflow: hidden;
+  border-radius: 10px;
 
-    border-radius: 10px;
-
-    background:
-        #000;
-
+  background: #000;
 }
-
 
 .portada img {
+  width: 100%;
 
-    width: 100%;
+  height: auto;
 
-    height: auto;
+  object-fit: contain;
 
-    object-fit: contain;
-
-    cursor: zoom-in;
-
+  cursor: zoom-in;
 }
-
 
 .libro-info {
+  display: flex;
 
-    display: flex;
+  flex-direction: column;
 
-    flex-direction: column;
-
-    justify-content: center;
-
+  justify-content: center;
 }
-
 
 .categoria {
+  color: #63b77b;
 
-    color:
-        #63b77b;
+  font-size: 11px;
 
-    font-size: 11px;
+  font-weight: bold;
 
-    font-weight: bold;
-
-    letter-spacing: 2px;
-
+  letter-spacing: 2px;
 }
-
 
 .libro h3 {
-
-    font-size: 28px;
-
+  font-size: 28px;
 }
-
 
 .libro-info p {
-
-    color:
-        #c1cbc5;
-
+  color: #c1cbc5;
 }
-
 
 .descripcion {
-
-    margin:
-        12px 0 20px;
-
+  margin: 12px 0 20px;
 }
-
 
 .descargas {
+  display: flex;
 
-    display: flex;
+  flex-wrap: wrap;
 
-    flex-wrap: wrap;
-
-    gap: 10px;
-
+  gap: 10px;
 }
-
 
 .btn-pdf {
+  padding: 11px 16px;
 
-    padding:
-        11px 16px;
+  border-radius: 7px;
 
-    border-radius: 7px;
+  background: var(--verde);
 
-    background:
-        var(--verde);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 
-    border:
-        1px solid
-        rgba(255,255,255,.15);
-
-    font-size: 13px;
-
+  font-size: 13px;
 }
-
 
 .btn-pdf.secundario {
-
-    background:
-        #17251c;
-
+  background: #17251c;
 }
-
 
 .sin-resultados {
+  display: none;
 
-    display: none;
+  padding: 50px 20px;
 
-    padding:
-        50px 20px;
-
-    text-align: center;
-
+  text-align: center;
 }
-
 
 /* =====================================================
    MODAL
 ===================================================== */
 
 .modal {
+  position: fixed;
 
-    position: fixed;
+  inset: 0;
 
-    inset: 0;
+  z-index: 5000;
 
-    z-index: 5000;
+  display: none;
 
-    display: none;
+  align-items: center;
 
-    align-items: center;
+  justify-content: center;
 
-    justify-content: center;
+  padding: 20px;
 
-    padding: 20px;
-
-    background:
-        rgba(0,0,0,.96);
-
+  background: rgba(0, 0, 0, 0.96);
 }
-
 
 .modal.active {
-
-    display: flex;
-
+  display: flex;
 }
-
 
 .modal img {
+  max-width: 96vw;
 
-    max-width:
-        96vw;
+  max-height: 92vh;
 
-    max-height:
-        92vh;
+  width: auto;
 
-    width: auto;
+  height: auto;
 
-    height: auto;
-
-    object-fit: contain;
-
+  object-fit: contain;
 }
-
 
 .cerrar-modal {
+  position: fixed;
 
-    position: fixed;
+  top: 18px;
 
-    top: 18px;
+  right: 20px;
 
-    right: 20px;
+  width: 48px;
 
-    width: 48px;
+  height: 48px;
 
-    height: 48px;
+  border: none;
 
-    border: none;
+  border-radius: 50%;
 
-    border-radius: 50%;
+  background: white;
 
-    background:
-        white;
+  color: var(--verde);
 
-    color:
-        var(--verde);
+  font-size: 30px;
 
-    font-size: 30px;
+  cursor: pointer;
 
-    cursor: pointer;
-
-    z-index: 5001;
-
+  z-index: 5001;
 }
-
 
 /* =====================================================
    FOOTER
 ===================================================== */
 
 footer {
+  padding: 40px 5% 20px;
 
-    padding:
-        40px 5% 20px;
+  background: #030504;
 
-    background:
-        #030504;
-
-    border-top:
-        1px solid
-        rgba(255,255,255,.1);
-
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 
 .footer-content {
+  max-width: 1200px;
 
-    max-width: 1200px;
+  margin: auto;
 
-    margin: auto;
+  display: flex;
 
-    display: flex;
+  justify-content: space-between;
 
-    justify-content: space-between;
-
-    gap: 30px;
-
+  gap: 30px;
 }
-
 
 .footer-content h3 {
-
-    color:
-        #6fc185;
-
+  color: #6fc185;
 }
-
 
 .footer-content p {
+  color: #aeb9b2;
 
-    color:
-        #aeb9b2;
-
-    font-size: 14px;
-
+  font-size: 14px;
 }
-
 
 .copyright {
+  max-width: 1200px;
 
-    max-width: 1200px;
+  margin: 30px auto 0;
 
-    margin:
-        30px auto 0;
+  padding-top: 20px;
 
-    padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-    border-top:
-        1px solid
-        rgba(255,255,255,.1);
+  text-align: center;
 
-    text-align: center;
+  color: #7d8881;
 
-    color:
-        #7d8881;
-
-    font-size: 13px;
-
+  font-size: 13px;
 }
-
 
 /* =====================================================
    TABLET
 ===================================================== */
 
 @media (max-width: 950px) {
+  nav a {
+    padding: 8px;
 
-    nav a {
-
-        padding:
-            8px;
-
-        font-size: 12px;
-
-    }
-
+    font-size: 12px;
+  }
 }
-
 
 /* =====================================================
    CELULAR
 ===================================================== */
 
 @media (max-width: 700px) {
+  .header {
+    min-height: 68px;
 
-    .header {
+    padding: 10px 4%;
+  }
 
-        min-height: 68px;
+  .logo h1 {
+    font-size: 16px;
+  }
 
-        padding:
-            10px 4%;
+  .logo p {
+    font-size: 9px;
+  }
 
-    }
+  .logo > span {
+    width: 38px;
 
+    height: 38px;
 
-    .logo h1 {
+    font-size: 19px;
+  }
 
-        font-size: 16px;
+  .menu-btn {
+    display: grid;
 
-    }
+    place-items: center;
+  }
 
+  nav {
+    position: absolute;
 
-    .logo p {
+    top: 68px;
 
-        font-size: 9px;
+    left: 0;
 
-    }
+    width: 100%;
 
+    display: none;
 
-    .logo > span {
+    flex-direction: column;
 
-        width: 38px;
+    align-items: stretch;
 
-        height: 38px;
+    padding: 10px;
 
-        font-size: 19px;
+    background: #050806;
 
-    }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
 
+  nav.active {
+    display: flex;
+  }
 
-    .menu-btn {
+  nav a {
+    width: 100%;
 
-        display: grid;
+    padding: 14px;
 
-        place-items: center;
+    font-size: 14px;
+  }
 
-    }
+  nav .nav-volver {
+    margin-left: 0;
 
+    margin-top: 5px;
 
-    nav {
+    text-align: center;
+  }
 
-        position: absolute;
+  .hero {
+    min-height: auto;
 
-        top: 68px;
+    padding: 55px 4%;
+  }
 
-        left: 0;
+  .hero-content {
+    grid-template-columns: 1fr;
 
-        width: 100%;
+    text-align: center;
+  }
 
-        display: none;
+  .hero p {
+    margin-left: auto;
 
-        flex-direction: column;
+    margin-right: auto;
 
-        align-items: stretch;
+    font-size: 15px;
+  }
 
-        padding: 10px;
+  .hero h2 {
+    font-size: clamp(34px, 10vw, 48px);
+  }
 
-        background:
-            #050806;
+  .section {
+    padding: 65px 4%;
+  }
 
-        border-bottom:
-            1px solid
-            rgba(255,255,255,.15);
+  .section-title {
+    margin-bottom: 32px;
+  }
 
-    }
+  .section-title h2 {
+    font-size: 30px;
+  }
 
+  /* CENTRO */
 
-    nav.active {
+  .student-carousel {
+    gap: 0;
+  }
 
-        display: flex;
+  .carousel-arrow {
+    position: absolute;
 
-    }
+    width: 40px;
 
+    height: 40px;
 
-    nav a {
+    font-size: 17px;
+  }
 
-        width: 100%;
+  .carousel-arrow.prev {
+    left: 10px;
+  }
 
-        padding:
-            14px;
+  .carousel-arrow.next {
+    right: 10px;
+  }
 
-        font-size: 14px;
+  .student-card {
+    grid-template-columns: 1fr;
 
-    }
+    min-height: auto;
+  }
 
+  .student-photo {
+    min-height: auto;
+  }
 
-    nav .nav-volver {
+  .student-photo img {
+    width: 100%;
 
-        margin-left: 0;
+    height: auto;
 
-        margin-top: 5px;
+    min-height: 0;
 
-        text-align: center;
+    max-height: 65vh;
+  }
 
-    }
+  .student-info {
+    padding: 28px 22px 30px;
 
+    text-align: center;
 
-    .hero {
+    align-items: center;
+  }
 
-        min-height: auto;
+  .student-info h3 {
+    font-size: 26px;
+  }
 
-        padding:
-            55px 4%;
+  .student-data {
+    width: 100%;
 
-    }
+    text-align: left;
+  }
 
+  .student-message {
+    width: 100%;
 
-    .hero-content {
+    text-align: left;
+  }
 
-        grid-template-columns:
-            1fr;
+  /* DESTACADOS */
 
-        text-align: center;
+  .destacado-card {
+    grid-template-columns: 1fr;
+  }
 
-    }
+  .destacado-info {
+    padding: 30px 20px;
 
+    text-align: center;
+  }
 
-    .hero p {
+  /* HORARIOS */
 
-        margin-left: auto;
+  .horario-box {
+    padding: 20px 15px;
+  }
 
-        margin-right: auto;
+  .horario-resultado img {
+    max-height: 75vh;
+  }
 
-        font-size: 15px;
+  /* GALERÍA */
 
-    }
+  .photo-carousel {
+    gap: 0;
+  }
 
+  .photo-arrow {
+    position: absolute;
 
-    .hero h2 {
+    width: 40px;
 
-        font-size:
-            clamp(34px, 10vw, 48px);
+    height: 40px;
 
-    }
+    font-size: 17px;
+  }
 
+  .photo-prev {
+    left: 10px;
+  }
 
-    .section {
+  .photo-next {
+    right: 10px;
+  }
 
-        padding:
-            65px 4%;
+  .photo-slide img {
+    max-height: 75vh;
+  }
 
-    }
+  /* BIBLIOTECA */
 
+  .libro {
+    grid-template-columns: 1fr;
 
-    .section-title {
+    text-align: center;
 
-        margin-bottom:
-            32px;
+    padding: 15px;
+  }
 
-    }
+  .portada {
+    width: 100%;
 
+    min-height: auto;
+  }
 
-    .section-title h2 {
+  .portada img {
+    max-height: none;
 
-        font-size:
-            30px;
+    width: 100%;
+  }
 
-    }
+  .libro-info {
+    align-items: center;
+  }
 
+  .descargas {
+    width: 100%;
 
-    /* CENTRO */
+    flex-direction: column;
+  }
 
-    .student-carousel {
+  .btn-pdf {
+    width: 100%;
 
-        gap: 0;
+    text-align: center;
+  }
 
-    }
+  /* FOOTER */
 
+  .footer-content {
+    flex-direction: column;
 
-    .carousel-arrow {
-
-        position: absolute;
-
-        width: 40px;
-
-        height: 40px;
-
-        font-size: 17px;
-
-    }
-
-
-    .carousel-arrow.prev {
-
-        left: 10px;
-
-    }
-
-
-    .carousel-arrow.next {
-
-        right: 10px;
-
-    }
-
-
-    .student-card {
-
-        grid-template-columns:
-            1fr;
-
-        min-height: auto;
-
-    }
-
-
-    .student-photo {
-
-        min-height: auto;
-
-    }
-
-
-    .student-photo img {
-
-        width: 100%;
-
-        height: auto;
-
-        min-height: 0;
-
-        max-height: 65vh;
-
-    }
-
-
-    .student-info {
-
-        padding:
-            28px 22px 30px;
-
-        text-align: center;
-
-        align-items: center;
-
-    }
-
-
-    .student-info h3 {
-
-        font-size: 26px;
-
-    }
-
-
-    .student-data {
-
-        width: 100%;
-
-        text-align: left;
-
-    }
-
-
-    .student-message {
-
-        width: 100%;
-
-        text-align: left;
-
-    }
-
-
-    /* DESTACADOS */
-
-    .destacado-card {
-
-        grid-template-columns:
-            1fr;
-
-    }
-
-
-    .destacado-info {
-
-        padding:
-            30px 20px;
-
-        text-align: center;
-
-    }
-
-
-    /* HORARIOS */
-
-    .horario-box {
-
-        padding:
-            20px 15px;
-
-    }
-
-
-    .horario-resultado img {
-
-        max-height:
-            75vh;
-
-    }
-
-
-    /* GALERÍA */
-
-    .photo-carousel {
-
-        gap: 0;
-
-    }
-
-
-    .photo-arrow {
-
-        position: absolute;
-
-        width: 40px;
-
-        height: 40px;
-
-        font-size: 17px;
-
-    }
-
-
-    .photo-prev {
-
-        left: 10px;
-
-    }
-
-
-    .photo-next {
-
-        right: 10px;
-
-    }
-
-
-    .photo-slide img {
-
-        max-height:
-            75vh;
-
-    }
-
-
-    /* BIBLIOTECA */
-
-    .libro {
-
-        grid-template-columns:
-            1fr;
-
-        text-align: center;
-
-        padding:
-            15px;
-
-    }
-
-
-    .portada {
-
-        width: 100%;
-
-        min-height:
-            auto;
-
-    }
-
-
-    .portada img {
-
-        max-height:
-            none;
-
-        width: 100%;
-
-    }
-
-
-    .libro-info {
-
-        align-items:
-            center;
-
-    }
-
-
-    .descargas {
-
-        width: 100%;
-
-        flex-direction:
-            column;
-
-    }
-
-
-    .btn-pdf {
-
-        width: 100%;
-
-        text-align: center;
-
-    }
-
-
-    /* FOOTER */
-
-    .footer-content {
-
-        flex-direction:
-            column;
-
-        text-align:
-            center;
-
-    }
-
+    text-align: center;
+  }
 }
-
 
 /* =====================================================
    CELULARES PEQUEÑOS
 ===================================================== */
 
 @media (max-width: 380px) {
+  .hero h2 {
+    font-size: 32px;
+  }
 
-    .hero h2 {
+  .section-title h2 {
+    font-size: 26px;
+  }
 
-        font-size:
-            32px;
+  .carousel-arrow {
+    width: 36px;
 
-    }
-
-
-    .section-title h2 {
-
-        font-size:
-            26px;
-
-    }
-
-
-    .carousel-arrow {
-
-        width: 36px;
-
-        height: 36px;
-
-    }
-
+    height: 36px;
+  }
 }

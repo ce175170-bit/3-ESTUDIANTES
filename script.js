@@ -537,22 +537,22 @@ const horarios = {
 
     "1a": {
         nombre: "1ro A",
-        imagen: "img/horario-1a.jpg"
+        imagen: "horario/1 A.png"
     },
 
     "1b": {
         nombre: "1ro B",
-        imagen: "img/horario-1b.jpg"
+        imagen: "horario/1 B.png"
     },
 
     "1c": {
         nombre: "1ro C",
-        imagen: "img/horario-1b.jpg"
+        imagen: "horario/1 C.png"
     },
 
     "2a": {
         nombre: "2do A",
-        imagen: "img/horario-2a.jpg"
+        imagen: "horario/2 A.png"
     },
 
     "2b": {
@@ -562,7 +562,7 @@ const horarios = {
 
     "2c": {
         nombre: "2do C",
-        imagen: "horario/2 B.png"
+        imagen: "horario/2 C.png"
     },
 
     "3a": {
@@ -572,12 +572,12 @@ const horarios = {
 
     "3b": {
         nombre: "3ro B",
-        imagen: "img/horario-3b.jpg"
+        imagen: "horario/3 B.png"
     },
 
     "3c": {
         nombre: "3ro C",
-        imagen: "img/horario-3b.jpg"
+        imagen: "horario/3 C.png"
     },
 
     "4a": {
@@ -592,7 +592,7 @@ const horarios = {
 
     "4c": {
         nombre: "4to C",
-        imagen: "img/horario-4b.jpg"
+        imagen: "horario/4 C.png"
     },
 
     "5a": {
