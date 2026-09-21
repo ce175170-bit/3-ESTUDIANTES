@@ -537,92 +537,92 @@ const horarios = {
 
     "1a": {
         nombre: "1ro A",
-        imagen: "horario/1 A.png"
+        imagen: "horario/1 A.webp"
     },
 
     "1b": {
         nombre: "1ro B",
-        imagen: "horario/1 B.png"
+        imagen: "horario/1 B.webp"
     },
 
     "1c": {
         nombre: "1ro C",
-        imagen: "horario/1 C.png"
+        imagen: "horario/1 C.webp"
     },
 
     "2a": {
         nombre: "2do A",
-        imagen: "horario/2 A.png"
+        imagen: "horario/2 A.webp"
     },
 
     "2b": {
         nombre: "2do B",
-        imagen: "horario/2 B.png"
+        imagen: "horario/2 B.webp"
     },
 
     "2c": {
         nombre: "2do C",
-        imagen: "horario/2 C.png"
+        imagen: "horario/2 C.webp"
     },
 
     "3a": {
         nombre: "3ro A",
-        imagen: "horario/3 A.png"
+        imagen: "horario/3 A.webp"
     },
 
     "3b": {
         nombre: "3ro B",
-        imagen: "horario/3 B.png"
+        imagen: "horario/3 B.webp"
     },
 
     "3c": {
         nombre: "3ro C",
-        imagen: "horario/3 C.png"
+        imagen: "horario/3 C.webp"
     },
 
     "4a": {
         nombre: "4to A",
-        imagen: "horario/4 A.png"
+        imagen: "horario/4 A.webp"
     },
 
     "4b": {
         nombre: "4to B",
-        imagen: "horario/4 B.png"
+        imagen: "horario/4 B.webp"
     },
 
     "4c": {
         nombre: "4to C",
-        imagen: "horario/4 C.png"
+        imagen: "horario/4 C.webp"
     },
 
     "5a": {
         nombre: "5to A",
-        imagen: "horario/5 A.png"
+        imagen: "horario/5 A.webp"
     },
 
     "5b": {
         nombre: "5to B",
-        imagen: "horario/5 B.png"
+        imagen: "horario/5 B.webp"
     },
 
     "5c": {
         nombre: "5to C",
-        imagen: "horario/5 C.png"
+        imagen: "horario/5 C.webp"
     },
 
     "6a": {
         nombre: "6to A",
-        imagen: "horario/6 A.png"
+        imagen: "horario/6 A.webp"
     },    
 
     "6b": {
         nombre: "6to B",
-        imagen: "horario/6 B.png"
+        imagen: "horario/6 B.webp"
     },
 
     "6c": {
         nombre: "6to C",
-        imagen: "horario/6 C.png"
+        imagen: "horario/6 C.webp"
     }
 };
 
