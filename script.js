@@ -9,42 +9,46 @@ const navMenu =
     document.getElementById("navMenu");
 
 
-menuBtn.addEventListener(
-    "click",
-    () => {
+if (menuBtn && navMenu) {
 
-        navMenu.classList.toggle("active");
-
-        const abierto =
-            navMenu.classList.contains("active");
-
-        menuBtn.textContent =
-            abierto ? "✕" : "☰";
-
-    }
-);
-
-
-/* CERRAR MENÚ AL TOCAR UNA OPCIÓN */
-
-document.querySelectorAll(
-    "#navMenu a"
-).forEach(link => {
-
-    link.addEventListener(
+    menuBtn.addEventListener(
         "click",
         () => {
 
-            navMenu.classList.remove(
-                "active"
-            );
+            navMenu.classList.toggle("active");
 
-            menuBtn.textContent = "☰";
+            const abierto =
+                navMenu.classList.contains("active");
+
+            menuBtn.textContent =
+                abierto ? "✕" : "☰";
 
         }
     );
 
-});
+
+    /* CERRAR MENÚ AL TOCAR UNA OPCIÓN */
+
+    document.querySelectorAll(
+        "#navMenu a"
+    ).forEach(link => {
+
+        link.addEventListener(
+            "click",
+            () => {
+
+                navMenu.classList.remove(
+                    "active"
+                );
+
+                menuBtn.textContent = "☰";
+
+            }
+        );
+
+    });
+
+}
 
 
 /* =====================================================
@@ -84,14 +88,27 @@ function crearCarrusel(config) {
 
     let startX = 0;
 
+    let startY = 0;
+
     let currentX = 0;
 
+    let currentY = 0;
+
     let dragging = false;
+
+    let horizontalGesture = false;
 
     let autoTimer = null;
 
 
-    /* CREAR PUNTOS */
+    if (total === 0) {
+        return;
+    }
+
+
+    /* =================================================
+       CREAR PUNTOS
+    ================================================= */
 
     if (dotsContainer) {
 
@@ -134,7 +151,9 @@ function crearCarrusel(config) {
     }
 
 
-    /* ACTUALIZAR */
+    /* =================================================
+       ACTUALIZAR
+    ================================================= */
 
     function actualizar() {
 
@@ -163,7 +182,9 @@ function crearCarrusel(config) {
     }
 
 
-    /* SIGUIENTE */
+    /* =================================================
+       SIGUIENTE
+    ================================================= */
 
     function siguiente() {
 
@@ -180,7 +201,9 @@ function crearCarrusel(config) {
     }
 
 
-    /* ANTERIOR */
+    /* =================================================
+       ANTERIOR
+    ================================================= */
 
     function anterior() {
 
@@ -197,7 +220,9 @@ function crearCarrusel(config) {
     }
 
 
-    /* BOTÓN SIGUIENTE */
+    /* =================================================
+       BOTÓN SIGUIENTE
+    ================================================= */
 
     if (next) {
 
@@ -215,7 +240,9 @@ function crearCarrusel(config) {
     }
 
 
-    /* BOTÓN ANTERIOR */
+    /* =================================================
+       BOTÓN ANTERIOR
+    ================================================= */
 
     if (prev) {
 
@@ -234,20 +261,33 @@ function crearCarrusel(config) {
 
 
     /* =================================================
-       TOUCH CELULAR
+       DESLIZAMIENTO CON EL DEDO
+       CELULAR / TABLET
     ================================================= */
 
     windowElement.addEventListener(
         "touchstart",
         e => {
 
+            if (!e.touches || !e.touches[0]) {
+                return;
+            }
+
             startX =
                 e.touches[0].clientX;
+
+            startY =
+                e.touches[0].clientY;
 
             currentX =
                 startX;
 
+            currentY =
+                startY;
+
             dragging = true;
+
+            horizontalGesture = false;
 
         },
         {
@@ -260,12 +300,42 @@ function crearCarrusel(config) {
         "touchmove",
         e => {
 
-            if (!dragging) {
+            if (
+                !dragging ||
+                !e.touches ||
+                !e.touches[0]
+            ) {
                 return;
             }
 
+
             currentX =
                 e.touches[0].clientX;
+
+            currentY =
+                e.touches[0].clientY;
+
+
+            const differenceX =
+                currentX - startX;
+
+            const differenceY =
+                currentY - startY;
+
+
+            /*
+             * Determinamos si el movimiento
+             * es horizontal.
+             */
+
+            if (
+                Math.abs(differenceX) >
+                Math.abs(differenceY)
+            ) {
+
+                horizontalGesture = true;
+
+            }
 
         },
         {
@@ -282,20 +352,35 @@ function crearCarrusel(config) {
                 return;
             }
 
-            const difference =
+
+            const differenceX =
                 currentX - startX;
 
+            const differenceY =
+                currentY - startY;
+
+
+            /*
+             * Solo cambiamos de imagen
+             * cuando el movimiento es
+             * claramente horizontal.
+             */
 
             if (
-                Math.abs(difference) > 50
+                horizontalGesture &&
+                Math.abs(differenceX) > 50 &&
+                Math.abs(differenceX) >
+                Math.abs(differenceY)
             ) {
 
-                if (difference < 0) {
+                if (differenceX < 0) {
 
+                    /* Deslizar hacia la izquierda */
                     siguiente();
 
                 } else {
 
+                    /* Deslizar hacia la derecha */
                     anterior();
 
                 }
@@ -305,8 +390,28 @@ function crearCarrusel(config) {
 
             dragging = false;
 
+            horizontalGesture = false;
+
             reiniciarAutomatico();
 
+        },
+        {
+            passive: true
+        }
+    );
+
+
+    windowElement.addEventListener(
+        "touchcancel",
+        () => {
+
+            dragging = false;
+
+            horizontalGesture = false;
+
+        },
+        {
+            passive: true
         }
     );
 
@@ -430,7 +535,9 @@ function crearCarrusel(config) {
     }
 
 
-    /* PAUSAR AL PASAR MOUSE */
+    /* =================================================
+       PAUSAR AL PASAR MOUSE
+    ================================================= */
 
     if (config.automatico) {
 
@@ -613,7 +720,7 @@ const horarios = {
     "6a": {
         nombre: "6to A",
         imagen: "horario/6 A.webp"
-    },    
+    },
 
     "6b": {
         nombre: "6to B",
@@ -624,56 +731,66 @@ const horarios = {
         nombre: "6to C",
         imagen: "horario/6 C.webp"
     }
+
 };
 
 
-cursoSelect.addEventListener(
-    "change",
-    () => {
+if (cursoSelect && horarioResultado) {
 
-        const curso =
-            cursoSelect.value;
+    cursoSelect.addEventListener(
+        "change",
+        () => {
+
+            const curso =
+                cursoSelect.value;
 
 
-        if (!curso) {
+            if (!curso) {
+
+                horarioResultado.innerHTML = `
+
+                    <p>
+                        Selecciona un curso
+                        para visualizar su horario.
+                    </p>
+
+                `;
+
+                return;
+
+            }
+
+
+            const datos =
+                horarios[curso];
+
+
+            if (!datos) {
+                return;
+            }
+
 
             horarioResultado.innerHTML = `
 
-                <p>
-                    Selecciona un curso
-                    para visualizar su horario.
-                </p>
+                <h3>
+                    Horario — ${datos.nombre}
+                </h3>
+
+                <img
+                    src="${datos.imagen}"
+                    alt="Horario ${datos.nombre}"
+                    class="imagen-ampliable"
+                >
 
             `;
 
-            return;
+
+            activarImagenes();
 
         }
+    );
 
-
-        const datos =
-            horarios[curso];
-
-
-        horarioResultado.innerHTML = `
-
-            <h3>
-                Horario — ${datos.nombre}
-            </h3>
-
-            <img
-                src="${datos.imagen}"
-                alt="Horario ${datos.nombre}"
-                class="imagen-ampliable"
-            >
-
-        `;
-
-
-        activarImagenes();
-
-    }
-);
+}
 
 
 /* =====================================================
@@ -698,6 +815,11 @@ const cerrarModal =
 
 function abrirImagen(src) {
 
+    if (!modal || !imagenModal) {
+        return;
+    }
+
+
     imagenModal.src =
         src;
 
@@ -713,12 +835,18 @@ function abrirImagen(src) {
 
 function cerrarImagen() {
 
+    if (!modal || !imagenModal) {
+        return;
+    }
+
+
     modal.classList.remove(
         "active"
     );
 
     document.body.style.overflow =
         "";
+
 
     setTimeout(
         () => {
@@ -732,26 +860,34 @@ function cerrarImagen() {
 }
 
 
-cerrarModal.addEventListener(
-    "click",
-    cerrarImagen
-);
+if (cerrarModal) {
+
+    cerrarModal.addEventListener(
+        "click",
+        cerrarImagen
+    );
+
+}
 
 
-modal.addEventListener(
-    "click",
-    e => {
+if (modal) {
 
-        if (
-            e.target === modal
-        ) {
+    modal.addEventListener(
+        "click",
+        e => {
 
-            cerrarImagen();
+            if (
+                e.target === modal
+            ) {
+
+                cerrarImagen();
+
+            }
 
         }
+    );
 
-    }
-);
+}
 
 
 document.addEventListener(
@@ -829,59 +965,71 @@ const sinResultados =
     );
 
 
-buscador.addEventListener(
-    "input",
-    () => {
+if (
+    buscador &&
+    libros.length &&
+    sinResultados
+) {
 
-        const texto =
-            buscador.value
-                .toLowerCase()
-                .trim();
+    buscador.addEventListener(
+        "input",
+        () => {
 
-
-        let encontrados = 0;
-
-
-        libros.forEach(
-            libro => {
-
-                const titulo =
-                    libro.dataset.titulo
-                        .toLowerCase();
-
-                const autor =
-                    libro.dataset.autor
-                        .toLowerCase();
+            const texto =
+                buscador.value
+                    .toLowerCase()
+                    .trim();
 
 
-                if (
-                    titulo.includes(texto) ||
-                    autor.includes(texto)
-                ) {
+            let encontrados = 0;
 
-                    libro.style.display =
-                        "grid";
 
-                    encontrados++;
+            libros.forEach(
+                libro => {
 
-                } else {
+                    const titulo =
+                        (
+                            libro.dataset.titulo ||
+                            ""
+                        ).toLowerCase();
 
-                    libro.style.display =
-                        "none";
+                    const autor =
+                        (
+                            libro.dataset.autor ||
+                            ""
+                        ).toLowerCase();
+
+
+                    if (
+                        titulo.includes(texto) ||
+                        autor.includes(texto)
+                    ) {
+
+                        libro.style.display =
+                            "grid";
+
+                        encontrados++;
+
+                    } else {
+
+                        libro.style.display =
+                            "none";
+
+                    }
 
                 }
-
-            }
-        );
+            );
 
 
-        sinResultados.style.display =
-            encontrados === 0
-                ? "block"
-                : "none";
+            sinResultados.style.display =
+                encontrados === 0
+                    ? "block"
+                    : "none";
 
-    }
-);
+        }
+    );
+
+}
 
 
 /* =====================================================
@@ -903,20 +1051,31 @@ document.querySelectorAll("img")
     });
 
 
-
-    /* =====================================================
+/* =====================================================
    PDF PARA APK / WEBVIEW
 ===================================================== */
 
-document.querySelectorAll(".btn-pdf").forEach(boton => {
+document.querySelectorAll(".btn-pdf")
+    .forEach(boton => {
 
-    boton.addEventListener("click", function () {
+        boton.addEventListener(
+            "click",
+            function () {
 
-        const url = this.href;
+                const url =
+                    this.href;
 
-        // Permite que el PDF se abra como archivo externo
-        window.open(url, "_blank");
+                /*
+                 * Permite que el PDF se abra
+                 * como archivo externo.
+                 */
+
+                window.open(
+                    url,
+                    "_blank"
+                );
+
+            }
+        );
 
     });
-
-});

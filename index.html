@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zona Estudiantes | Col. J.F.B.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="icon" type="image/png" href="imagenes/Escudo transparente.png">
+    <link rel="icon" type="image/png" href="imagenes/Escudo transparente.webp">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="script.js">
 </head>
@@ -45,31 +45,49 @@
 </header>
 
 <!-- =====================================================
-     INICIO
+     BIENVENIDA ZONA ESTUDIANTES
 ===================================================== -->
-<section id="inicio" class="hero">
-    <div class="hero-content">
-        <div class="hero-text">
-            <span class="etiqueta">
-                ESPACIO ESTUDIANTIL
+<section class="bienvenida-estudiantes" id="bienvenida">
+    <div class="bienvenida-estudiantes-fondo">
+        <div class="bienvenida-estudiantes-overlay"></div>
+    </div>
+    <div class="bienvenida-estudiantes-contenido">
+        <div class="bienvenida-estudiantes-texto">
+            <span class="bienvenida-estudiantes-etiqueta">
+                COLEGIO JUAN FRANCISCO BOHÓRQUEZ
             </span>
-            <h2>
-                Bienvenidos a la
-                <strong>Zona Estudiantes</strong>
-            </h2>
+            <h1>
+                Bienvenidos a
+                <span>Zona Estudiantes</span>
+            </h1>
             <p>
-                Un espacio creado para compartir información,
-                actividades, horarios, biblioteca digital y
-                momentos destacados de nuestra comunidad educativa.
+                Un espacio creado para nuestra comunidad estudiantil,
+                donde podrás encontrar información, actividades,
+                horarios, biblioteca digital, fotografías y momentos
+                destacados de nuestra institución.
             </p>
-            <a href="#biblioteca" class="btn">"Biblioteca Digital"</a>
-            <a href="#horarios" class="btn">"Horarios"</a>
+            <a href="#horarios" class="bienvenida-estudiantes-boton">
+                Horarios
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
+            <a href="#objetos-perdidos" class="bienvenida-estudiantes-boton">
+                Objetos Perdidos
+                <i class="fa-solid fa-arrow-down"></i>
+            </a>
         </div>
-        <div class="hero-image">
-            <img
-                src="Imagenes/Portada.jpg"
-                alt="Zona Estudiantes">
+        <div class="bienvenida-estudiantes-decoracion">
+            <div class="bienvenida-estudiantes-circulo"></div>
+            <div class="bienvenida-estudiantes-icono">
+                <img src="Imagenes/Escudo transparente.webp" alt="">
+            </div>
+            <span>
+                EDUCACIÓN · PARTICIPACIÓN · FUTURO
+            </span>
         </div>
+    </div>
+    <div class="bienvenida-estudiantes-scroll">
+        <span>DESLIZA PARA CONTINUAR</span>
+        <i class="fa-solid fa-chevron-down"></i>
     </div>
 </section>
 
@@ -134,7 +152,7 @@
                     <div class="student-card">
                         <div class="student-photo">
                             <img
-                                src="Imagenes/dos.webp"
+                                src="Imagenes/dos.jpg"
                                 alt="Vicepresidente del Centro de Estudiantes">
                         </div>
                         <div class="student-info">
@@ -294,7 +312,7 @@
     <div class="destacado-card">
         <div class="destacado-image">
             <img
-                src="Imagenes/mejores.png"
+                src="Imagenes/mejores.webp"
                 alt="Estudiantes destacados">
         </div>
         <div class="destacado-info">
@@ -483,6 +501,266 @@
 </section>
 
 <!-- =====================================================
+     OBJETOS PERDIDOS
+===================================================== -->
+<section class="section objetos-section scroll-reveal" id="objetos-perdidos">
+
+    <div class="section-title">
+
+        <span>
+            <i class="fa-solid fa-box-open"></i>
+            OBJETOS PERDIDOS
+        </span>
+
+        <h2>¿Perdiste algo?</h2>
+
+        <p>
+            Consulta los objetos encontrados dentro de nuestra institución
+            y verifica dónde puedes reclamarlos.
+        </p>
+
+    </div>
+
+
+    <!-- =================================================
+         LISTA DE OBJETOS
+    ================================================== -->
+
+    <div class="objetos-grid">
+
+
+        <!-- 🟢 OBJETO 1 -->
+
+        <article class="objeto-card">
+
+            <div class="objeto-imagen">
+
+                <img
+                    src="img/objetos-perdidos/mochila.jpg"
+                    alt="Mochila negra encontrada en el colegio"
+                >
+
+                <div class="objeto-etiqueta">
+                    <i class="fa-solid fa-box-open"></i>
+                    OBJETO PERDIDO
+                </div>
+
+            </div>
+
+
+            <div class="objeto-info">
+
+                <h3>
+                    Mochila negra
+                </h3>
+
+
+                <p class="objeto-dato">
+                    <strong>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Encontrado en:
+                    </strong>
+
+                    Patio principal
+                </p>
+
+
+                <p class="objeto-dato">
+                    <strong>
+                        <i class="fa-regular fa-calendar"></i>
+                        Fecha:
+                    </strong>
+
+                    20 de septiembre de 2026
+                </p>
+
+
+                <p class="objeto-descripcion">
+                    Mochila negra con un cuaderno azul y algunos
+                    materiales escolares en su interior.
+                </p>
+
+
+                <div class="objeto-reclamar">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <div class="objeto-reclamar-texto">
+
+                        <span>
+                            Reclamar en
+                        </span>
+
+                        <strong>
+                            Dirección
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 🟢 OBJETO 2 -->
+
+        <article class="objeto-card">
+
+            <div class="objeto-imagen">
+
+                <img
+                    src="img/objetos-perdidos/botella.jpg"
+                    alt="Botella encontrada en el colegio"
+                >
+
+                <div class="objeto-etiqueta">
+                    <i class="fa-solid fa-box-open"></i>
+                    OBJETO PERDIDO
+                </div>
+
+            </div>
+
+
+            <div class="objeto-info">
+
+                <h3>
+                    Botella de agua
+                </h3>
+
+
+                <p class="objeto-dato">
+                    <strong>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Encontrado en:
+                    </strong>
+
+                    Cancha deportiva
+                </p>
+
+
+                <p class="objeto-dato">
+                    <strong>
+                        <i class="fa-regular fa-calendar"></i>
+                        Fecha:
+                    </strong>
+
+                    19 de septiembre de 2026
+                </p>
+
+
+                <p class="objeto-descripcion">
+                    Botella de agua de color azul con una tapa
+                    negra.
+                </p>
+
+
+                <div class="objeto-reclamar">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <div class="objeto-reclamar-texto">
+
+                        <span>
+                            Reclamar en
+                        </span>
+
+                        <strong>
+                            Portería
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- 🟢 OBJETO 3 -->
+
+        <article class="objeto-card">
+
+            <div class="objeto-imagen">
+
+                <img
+                    src="img/objetos-perdidos/chompa.jpg"
+                    alt="Chompa encontrada en el colegio"
+                >
+
+                <div class="objeto-etiqueta">
+                    <i class="fa-solid fa-box-open"></i>
+                    OBJETO PERDIDO
+                </div>
+
+            </div>
+
+
+            <div class="objeto-info">
+
+                <h3>
+                    Chompa azul
+                </h3>
+
+
+                <p class="objeto-dato">
+                    <strong>
+                        <i class="fa-solid fa-location-dot"></i>
+                        Encontrado en:
+                    </strong>
+
+                    Aula 3
+                </p>
+
+
+                <p class="objeto-dato">
+                    <strong>
+                        <i class="fa-regular fa-calendar"></i>
+                        Fecha:
+                    </strong>
+
+                    18 de septiembre de 2026
+                </p>
+
+
+                <p class="objeto-descripcion">
+                    Chompa de color azul, encontrada durante
+                    la jornada escolar.
+                </p>
+
+
+                <div class="objeto-reclamar">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <div class="objeto-reclamar-texto">
+
+                        <span>
+                            Reclamar en
+                        </span>
+
+                        <strong>
+                            Secretaría
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+<!-- =====================================================
      BIBLIOTECA DIGITAL
 ===================================================== -->
 <section id="biblioteca" class="section">
@@ -506,7 +784,7 @@
             data-autor="fundacion">
             <div class="portada">
                 <img
-                    src="Imagenes/frontis.png"
+                    src="Imagenes/frontis.webp"
                     alt="Creacion del Colegio">
             </div>
             <div class="libro-info">
@@ -571,7 +849,7 @@
             data-autor="himno">
             <div class="portada">
                 <img
-                    src="Imagenes/himno.png"
+                    src="Imagenes/himno.webp"
                     alt="himno col. J.F.B.">
             </div>
             <div class="libro-info">
@@ -603,7 +881,7 @@
             data-autor="interno">
             <div class="portada">
                 <img
-                    src="Imagenes/reglamento.png"
+                    src="Imagenes/reglamento.webp"
                     alt="Reglamento del Col. J.F.B.">
             </div>
             <div class="libro-info">
