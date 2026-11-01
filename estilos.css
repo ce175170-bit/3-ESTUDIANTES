@@ -1,10 +1,8 @@
 /* =====================================================
    VARIABLES
 ===================================================== */
-
 :root {
     --verde: #0a3d1e;
-    --verde-claro: #145c31;
     --verde-brillante: #278047;
     --negro: #030604;
     --negro-2: #080d0a;
@@ -21,21 +19,17 @@
     --dorado-claro: #f1d77a;
 }
 
-
 /* =====================================================
    RESET
 ===================================================== */
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-
 html {
     scroll-behavior: smooth;
 }
-
 body {
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
     background: var(--negro);
@@ -43,47 +37,32 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 }
-
 img {
     max-width: 100%;
     display: block;
 }
-
 button,
 select,
 input {
     font-family: inherit;
 }
-
 a {
     text-decoration: none;
     color: inherit;
 }
 
-
-/* =====================================================
-   TIPOGRAFÍA GENERAL
-===================================================== */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-button,
-select,
-input {
-    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+/* Foco visible para quienes navegan con teclado */
+a:focus-visible,
+button:focus-visible,
+select:focus-visible,
+input:focus-visible {
+    outline: 2px solid var(--verde-texto);
+    outline-offset: 3px;
 }
 
-
 /* =====================================================
-   HEADER
+   ENCABEZADO
 ===================================================== */
-
 .encabezado {
     position: sticky;
     top: 0;
@@ -97,13 +76,11 @@ input {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
 }
-
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
 }
-
 .logo > span {
     width: 46px;
     height: 46px;
@@ -114,55 +91,45 @@ input {
     color: var(--verde);
     font-size: 23px;
 }
-
 .logo h1 {
     font-size: 20px;
 }
-
 .logo p {
     color: #aebdb4;
     font-size: 11px;
     text-transform: uppercase;
 }
 
-
 /* =====================================================
    MENÚ
 ===================================================== */
-
 nav {
     display: flex;
     align-items: center;
     gap: 3px;
 }
-
 nav a {
     padding: 10px 12px;
     border-radius: 7px;
-    font-size: 13px;
-    transition: 0.3s ease;
+    font-size: 16px;
+    transition: 0.5s ease;
 }
-
 nav a:hover {
-    background: var(--blanco);
-    color: var(--verde);
+    
+    color: #12f729;
 }
 
-
-/* BOTÓN VOLVER A INICIO */
-
+/* Botón volver a inicio */
 nav .enlace-volver {
     margin-left: 7px;
     background: var(--blanco);
     color: var(--verde);
     font-weight: bold;
 }
-
 nav .enlace-volver:hover {
     background: #dce8e0;
     color: #062a15;
 }
-
 .boton-menu {
     display: none;
     width: 44px;
@@ -175,25 +142,18 @@ nav .enlace-volver:hover {
     cursor: pointer;
 }
 
-
 /* =====================================================
-   HERO
+   PORTADA
 ===================================================== */
-
 .presentacion {
     min-height: 650px;
     padding: 80px 5%;
     display: flex;
     align-items: center;
     background:
-        radial-gradient(
-            circle at 80% 20%,
-            rgba(20, 92, 49, 0.35),
-            transparent 35%
-        ),
+        radial-gradient(circle at 80% 20%, rgba(20, 92, 49, 0.35), transparent 35%),
         var(--negro);
 }
-
 .presentacion-contenido {
     width: 100%;
     max-width: 1250px;
@@ -203,7 +163,6 @@ nav .enlace-volver:hover {
     gap: 60px;
     align-items: center;
 }
-
 .presentacion-texto .etiqueta {
     display: inline-block;
     padding: 7px 14px;
@@ -212,25 +171,21 @@ nav .enlace-volver:hover {
     font-size: 12px;
     margin-bottom: 18px;
 }
-
 .presentacion h2 {
     font-size: clamp(40px, 6vw, 72px);
     line-height: 1.05;
     margin-bottom: 25px;
 }
-
 .presentacion h2 strong {
     display: block;
     color: var(--verde-claro-texto);
 }
-
 .presentacion p {
     max-width: 600px;
     color: #c5cec8;
     font-size: 17px;
     margin-bottom: 30px;
 }
-
 .boton-principal {
     display: inline-block;
     padding: 14px 24px;
@@ -240,200 +195,235 @@ nav .enlace-volver:hover {
     font-weight: bold;
     transition: 0.3s;
 }
-
 .boton-principal:hover {
     transform: translateY(-3px);
 }
-
 .presentacion-imagen {
     overflow: hidden;
     border-radius: 18px;
     border: 2px solid rgba(255, 255, 255, 0.12);
     background: #000;
 }
-
 .presentacion-imagen img {
     width: 100%;
     height: auto;
-    object-fit: contain;
 }
 
+/* =====================================================
+   BIENVENIDA ZONA ESTUDIANTES
+===================================================== */
+.bienvenida-estudiantes {
+    position: relative;
+    min-height: 92vh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: #031b0d;
+    color: #fff;
+    isolation: isolate;
+}
+.bienvenida-estudiantes-fondo {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background-image: url("Imagenes/Portada.jpg");
+    background-size: cover;
+    background-position: center;
+    transform: scale(1.03);
+}
+.bienvenida-estudiantes-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(3, 27, 13, 0.97) 0%,
+            rgba(3, 27, 13, 0.88) 38%,
+            rgba(10, 61, 30, 0.70) 70%,
+            rgba(3, 27, 13, 0.82) 100%
+        );
+}
+.bienvenida-estudiantes-contenido {
+    position: relative;
+    z-index: 1;
+    width: min(1200px, 92%);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+    padding: 100px 0 80px;
+}
+.bienvenida-estudiantes-texto {
+    max-width: 720px;
+    animation: bienvenidaEstudiantesEntrada 1s ease both;
+}
+.bienvenida-estudiantes-etiqueta {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    border-left: 3px solid var(--dorado);
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--dorado-claro);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.bienvenida-estudiantes-texto h1 {
+    margin: 0 0 22px;
+    font-size: clamp(2.8rem, 6vw, 5.2rem);
+    line-height: 1.05;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+.bienvenida-estudiantes-texto h1 span {
+    display: block;
+    color: var(--dorado);
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+}
+.bienvenida-estudiantes-texto p {
+    max-width: 680px;
+    margin: 0 0 32px;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 1.08rem;
+    line-height: 1.8;
+}
+.bienvenida-estudiantes-boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 24px;
+    border: 1px solid var(--dorado);
+    border-radius: 6px;
+    background: var(--verde);
+    color: #fff;
+    font-size: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+    transition:
+        transform 0.3s ease,
+        background 0.3s ease,
+        color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+.bienvenida-estudiantes-boton i {
+    color: var(--dorado-claro);
+    transition: transform 0.3s ease;
+}
+.bienvenida-estudiantes-boton:hover {
+    background: var(--dorado);
+    color: #031b0d;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+}
+.bienvenida-estudiantes-boton:hover i {
+    color: #031b0d;
+    transform: translateY(4px);
+}
+.bienvenida-estudiantes-decoracion {
+    position: relative;
+    min-height: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: bienvenidaEstudiantesDecoracion 1.2s ease both;
+}
+.bienvenida-estudiantes-circulo {
+    position: absolute;
+    width: 330px;
+    height: 330px;
+    border: 1px solid rgba(212, 175, 55, 0.45);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 35px rgba(255, 255, 255, 0.025),
+        0 0 0 70px rgba(255, 255, 255, 0.018);
+    animation: bienvenidaEstudiantesPulso 5s ease-in-out infinite;
+}
+.bienvenida-estudiantes-icono {
+    position: relative;
+    z-index: 2;
+    width: 170px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--dorado);
+    border-radius: 50%;
+    background: rgba(3, 27, 13, 0.72);
+    box-shadow:
+        0 0 40px rgba(212, 175, 55, 0.18),
+        inset 0 0 35px rgba(255, 255, 255, 0.04);
+}
+.bienvenida-estudiantes-icono i {
+    color: var(--dorado-claro);
+    font-size: 5rem;
+}
+.bienvenida-estudiantes-decoracion span {
+    position: relative;
+    z-index: 2;
+    margin-top: 42px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-align: center;
+}
+.bienvenida-estudiantes-scroll {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255, 255, 255, 0.72);
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    animation: bienvenidaEstudiantesScroll 2s ease-in-out infinite;
+}
+.bienvenida-estudiantes-scroll i {
+    color: var(--dorado);
+    font-size: 1rem;
+}
 
 /* =====================================================
    SECCIONES
 ===================================================== */
-
 .seccion {
     padding: 90px 5%;
     background: var(--negro);
 }
-
 .seccion-oscura {
     background: linear-gradient(135deg, #030604, #0a3d1e);
 }
-
 .titulo-seccion {
     max-width: 900px;
     margin: 0 auto 50px;
     text-align: center;
 }
-
 .titulo-seccion span {
     color: var(--verde-texto);
     font-weight: bold;
     letter-spacing: 3px;
 }
-
 .titulo-seccion h2 {
     font-size: clamp(30px, 5vw, 48px);
     margin: 8px 0;
 }
-
 .titulo-seccion p {
     color: #bac5be;
 }
 
-
 /* =====================================================
-   CENTRO DE ESTUDIANTES
+   FLECHAS (carrusel de estudiantes y galería de fotos)
 ===================================================== */
-
-.carrusel-estudiantes {
-    position: relative;
-    width: 100%;
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.ventana-carrusel-estudiantes {
-    width: 100%;
-    overflow: hidden;
-    border-radius: 18px;
-    background: #000;
-    border: 2px solid rgba(255, 255, 255, 0.13);
-
-    /* Permite desplazamiento táctil horizontal */
-    touch-action: pan-y;
-    -webkit-user-select: none;
-    user-select: none;
-}
-
-.pista-carrusel-estudiantes {
-    display: flex;
-    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    will-change: transform;
-}
-
-.diapositiva-estudiante {
-    flex: 0 0 100%;
-    min-width: 100%;
-}
-
-.tarjeta-estudiante {
-    width: 100%;
-    min-height: 430px;
-    display: grid;
-    grid-template-columns: 42% 58%;
-    background: linear-gradient(
-        135deg,
-        #050806,
-        #0a3d1e
-    );
-}
-
-.foto-estudiante {
-    min-height: 430px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: #000;
-    overflow: hidden;
-}
-
-.foto-estudiante img {
-    width: 100%;
-    height: 100%;
-    min-height: 430px;
-    object-fit: contain;
-    cursor: zoom-in;
-    transition: transform 0.4s ease;
-}
-
-.foto-estudiante img:hover {
-    transform: scale(1.03);
-}
-
-.info-estudiante {
-    padding: 45px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.etiqueta-estudiante {
-    display: inline-block;
-    width: fit-content;
-    padding: 6px 12px;
-    margin-bottom: 15px;
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    color: var(--verde-suave);
-    font-size: 11px;
-    font-weight: bold;
-    letter-spacing: 1.5px;
-}
-
-.info-estudiante h3 {
-    font-size: clamp(25px, 3vw, 38px);
-    line-height: 1.15;
-    margin-bottom: 22px;
-}
-
-.datos-estudiante {
-    display: grid;
-    gap: 10px;
-    margin-bottom: 25px;
-}
-
-.datos-estudiante p {
-    color: #d1dad4;
-    font-size: 15px;
-}
-
-.datos-estudiante strong {
-    color: white;
-}
-
-.mensaje-estudiante {
-    padding: 18px;
-    border-left: 4px solid #67b97f;
-    background: rgba(0, 0, 0, 0.25);
-    border-radius: 0 10px 10px 0;
-}
-
-.mensaje-estudiante span {
-    display: block;
-    margin-bottom: 8px;
-    color: #78c98d;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.mensaje-estudiante p {
-    color: #d1dad4;
-    font-size: 14px;
-    font-style: italic;
-}
-
-
-/* =====================================================
-   FLECHAS
-===================================================== */
-
-.flecha-carrusel {
+.flecha-carrusel,
+.flecha-foto {
     flex-shrink: 0;
     width: 48px;
     height: 48px;
@@ -449,16 +439,125 @@ nav .enlace-volver:hover {
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     transition: 0.25s;
 }
-
-.flecha-carrusel:hover {
+.flecha-carrusel:hover,
+.flecha-foto:hover {
     transform: scale(1.08);
 }
 
-
 /* =====================================================
-   PUNTOS
+   CENTRO DE ESTUDIANTES
 ===================================================== */
+.carrusel-estudiantes {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.ventana-carrusel-estudiantes {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #000;
+    border: 2px solid rgba(255, 255, 255, 0.13);
 
+    /* Permite desplazamiento táctil horizontal */
+    touch-action: pan-y;
+    -webkit-user-select: none;
+    user-select: none;
+}
+.pista-carrusel-estudiantes {
+    display: flex;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: transform;
+}
+.diapositiva-estudiante {
+    flex: 0 0 100%;
+    min-width: 100%;
+}
+.tarjeta-estudiante {
+    width: 100%;
+    min-height: 430px;
+    display: grid;
+    grid-template-columns: 42% 58%;
+    background: linear-gradient(135deg, #050806, #0a3d1e);
+}
+.foto-estudiante {
+    min-height: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    overflow: hidden;
+}
+.foto-estudiante img {
+    width: 100%;
+    height: 100%;
+    min-height: 430px;
+    object-fit: contain;
+    cursor: zoom-in;
+    transition: transform 0.4s ease;
+}
+.foto-estudiante img:hover {
+    transform: scale(1.03);
+}
+.info-estudiante {
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.etiqueta-estudiante {
+    display: inline-block;
+    width: fit-content;
+    padding: 6px 12px;
+    margin-bottom: 15px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--verde-suave);
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+.info-estudiante h3 {
+    font-size: clamp(25px, 3vw, 38px);
+    line-height: 1.15;
+    margin-bottom: 22px;
+}
+.datos-estudiante {
+    display: grid;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.datos-estudiante p {
+    color: #d1dad4;
+    font-size: 15px;
+}
+.datos-estudiante strong {
+    color: white;
+}
+.mensaje-estudiante {
+    padding: 18px;
+    border-left: 4px solid #67b97f;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 0 10px 10px 0;
+}
+.mensaje-estudiante span {
+    display: block;
+    margin-bottom: 8px;
+    color: #78c98d;
+    font-size: 13px;
+    font-weight: bold;
+}
+.mensaje-estudiante p {
+    color: #d1dad4;
+    font-size: 14px;
+    font-style: italic;
+}
+
+/* Puntos */
 .puntos-carrusel {
     display: flex;
     justify-content: center;
@@ -466,7 +565,6 @@ nav .enlace-volver:hover {
     gap: 8px;
     margin-top: 18px;
 }
-
 .punto-carrusel {
     width: 9px;
     height: 9px;
@@ -475,18 +573,15 @@ nav .enlace-volver:hover {
     background: #526158;
     cursor: pointer;
 }
-
 .punto-carrusel.activo {
     width: 25px;
     border-radius: 20px;
     background: var(--verde-texto);
 }
 
-
 /* =====================================================
    DESTACADOS
 ===================================================== */
-
 .destacado-card {
     max-width: 1100px;
     margin: auto;
@@ -497,28 +592,23 @@ nav .enlace-volver:hover {
     background: #050806;
     border: 1px solid rgba(255, 255, 255, 0.15);
 }
-
 .destacado-image {
     background: #000;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
 .destacado-image img {
     width: 100%;
     height: auto;
-    object-fit: contain;
     cursor: zoom-in;
 }
-
 .destacado-info {
     padding: 50px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .reconocimiento {
     color: var(--verde-texto);
     font-size: 12px;
@@ -526,68 +616,54 @@ nav .enlace-volver:hover {
     letter-spacing: 2px;
     margin-bottom: 15px;
 }
-
 .destacado-info h3 {
     font-size: 32px;
     margin-bottom: 15px;
 }
-
 .destacado-info h4 {
     color: #b8d1bf;
     margin-bottom: 20px;
-    text-align: left;
 }
-
 .nombres {
     font-size: 20px;
     font-weight: 500;
-    text-align: left;
     color: #fff;
 }
-
 .destacado-info p {
     color: #fff;
-    text-align: left;
-    font-weight: 200;
+    font-weight: 300;
 }
-
 
 /* =====================================================
    HORARIOS
 ===================================================== */
-
 .horario-box {
     max-width: 950px;
     margin: auto;
     padding: 35px;
-    background: #080d0a;
+    background: var(--negro-2);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.13);
 }
-
 .horario-box label {
     display: block;
     margin-bottom: 10px;
     font-weight: bold;
 }
-
 select {
     width: 100%;
     padding: 14px;
     border: none;
     border-radius: 8px;
-    outline: none;
     background: var(--verde);
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
-
 .horario-resultado {
     margin-top: 30px;
     text-align: center;
 }
-
 .horario-resultado img {
     width: 100%;
     max-width: 900px;
@@ -601,26 +677,14 @@ select {
     cursor: zoom-in;
 }
 
-
 /* =====================================================
    OBJETOS PERDIDOS
 ===================================================== */
-
 .objetos-section {
     background:
-        radial-gradient(
-            circle at 50% 0%,
-            rgba(20, 92, 49, 0.16),
-            transparent 45%
-        ),
+        radial-gradient(circle at 50% 0%, rgba(20, 92, 49, 0.16), transparent 45%),
         var(--negro);
 }
-
-
-/* =====================================================
-   GRID
-===================================================== */
-
 .objetos-grid {
     width: 100%;
     max-width: 1100px;
@@ -629,31 +693,18 @@ select {
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
 }
-
-
-/* =====================================================
-   TARJETA
-===================================================== */
-
 .objeto-card {
     position: relative;
-    background:
-        linear-gradient(
-            145deg,
-            #0c1510,
-            #080d0a 65%
-        );
-    border: 1px solid rgba(255, 255, 255, 0.10);
+    background: linear-gradient(145deg, #0c1510, var(--negro-2) 65%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
     overflow: hidden;
-    box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
     transition:
         transform 0.35s ease,
         box-shadow 0.35s ease,
         border-color 0.35s ease;
 }
-
 .objeto-card:hover {
     transform: translateY(-9px);
     border-color: rgba(39, 128, 71, 0.65);
@@ -662,11 +713,7 @@ select {
         0 0 25px rgba(39, 128, 71, 0.12);
 }
 
-
-/* =====================================================
-   FRANJA VERDE SUPERIOR
-===================================================== */
-
+/* Franja verde superior */
 .objeto-card::before {
     content: "";
     position: absolute;
@@ -684,11 +731,25 @@ select {
     );
 }
 
+/* Brillo decorativo */
+.objeto-card::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    right: -80px;
+    bottom: -80px;
+    border-radius: 50%;
+    background: rgba(39, 128, 71, 0.1);
+    filter: blur(35px);
+    pointer-events: none;
+    transition: 0.4s ease;
+}
+.objeto-card:hover::after {
+    background: rgba(39, 128, 71, 0.2);
+}
 
-/* =====================================================
-   IMAGEN
-===================================================== */
-
+/* Imagen */
 .objeto-imagen {
     position: relative;
     width: 100%;
@@ -696,46 +757,34 @@ select {
     overflow: hidden;
     background: #000;
 }
-
 .objeto-imagen img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    display: block;
     transition:
         transform 0.6s ease,
         filter 0.4s ease;
 }
-
 .objeto-card:hover .objeto-imagen img {
     transform: scale(1.07);
     filter: brightness(1.08);
 }
 
-
-/* =====================================================
-   DEGRADADO SOBRE LA FOTO
-===================================================== */
-
+/* Degradado sobre la foto */
 .objeto-imagen::after {
     content: "";
     position: absolute;
     inset: 0;
-    background:
-        linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.03),
-            rgba(0, 0, 0, 0.12),
-            rgba(3, 6, 4, 0.72)
-        );
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.03),
+        rgba(0, 0, 0, 0.12),
+        rgba(3, 6, 4, 0.72)
+    );
     pointer-events: none;
 }
 
-
-/* =====================================================
-   ETIQUETA "OBJETO PERDIDO"
-===================================================== */
-
+/* Etiqueta "Objeto perdido" */
 .objeto-etiqueta {
     position: absolute;
     top: 16px;
@@ -752,28 +801,16 @@ select {
     font-size: 10px;
     font-weight: bold;
     letter-spacing: 1.2px;
+    -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
 }
-
 .objeto-etiqueta i {
     color: var(--verde-texto);
     font-size: 11px;
 }
-
-
-/* =====================================================
-   INFORMACIÓN
-===================================================== */
-
 .objeto-info {
     padding: 22px;
 }
-
-
-/* =====================================================
-   NOMBRE
-===================================================== */
-
 .objeto-info h3 {
     margin: 0 0 17px;
     color: var(--blanco);
@@ -781,60 +818,39 @@ select {
     line-height: 1.2;
     font-weight: 700;
 }
-
-
-/* =====================================================
-   DATOS
-===================================================== */
-
 .objeto-dato {
-    margin: 0 0 9px !important;
+    margin: 0 0 9px;
     color: var(--gris);
     font-size: 14px;
     line-height: 1.5;
 }
-
 .objeto-dato strong {
     color: var(--verde-texto);
     font-weight: 600;
 }
-
 .objeto-dato i {
     width: 18px;
     color: var(--verde-brillante);
     margin-right: 3px;
 }
-
-
-/* =====================================================
-   DESCRIPCIÓN
-===================================================== */
-
 .objeto-descripcion {
-    margin: 16px 0 0 !important;
+    margin: 16px 0 0;
     padding-top: 15px;
     border-top: 1px solid rgba(255, 255, 255, 0.09);
     color: #b8c4bc;
     font-size: 13px;
     line-height: 1.6;
 }
-
-
-/* =====================================================
-   RECLAMAR EN
-===================================================== */
-
 .objeto-reclamar {
     display: flex;
     align-items: center;
     gap: 11px;
-    margin-top: 18px !important;
+    margin-top: 18px;
     padding: 13px 14px;
     border-radius: 10px;
     background: rgba(20, 92, 49, 0.14);
     border: 1px solid rgba(39, 128, 71, 0.25);
 }
-
 .objeto-reclamar > i {
     width: 34px;
     height: 34px;
@@ -846,13 +862,11 @@ select {
     color: var(--blanco);
     font-size: 13px;
 }
-
 .objeto-reclamar-texto {
     display: flex;
     flex-direction: column;
     gap: 2px;
 }
-
 .objeto-reclamar-texto span {
     color: #819089;
     font-size: 10px;
@@ -860,40 +874,14 @@ select {
     letter-spacing: 1px;
     font-weight: bold;
 }
-
 .objeto-reclamar-texto strong {
     color: var(--verde-texto);
     font-size: 13px;
 }
 
-
 /* =====================================================
-   EFECTO DE LUZ
+   GALERÍA DE FOTOS
 ===================================================== */
-
-.objeto-card::after {
-    content: "";
-    position: absolute;
-    width: 160px;
-    height: 160px;
-    right: -80px;
-    bottom: -80px;
-    border-radius: 50%;
-    background: rgba(39, 128, 71, 0.10);
-    filter: blur(35px);
-    pointer-events: none;
-    transition: 0.4s ease;
-}
-
-.objeto-card:hover::after {
-    background: rgba(39, 128, 71, 0.20);
-}
-
-
-/* =====================================================
-   GALERÍA
-===================================================== */
-
 .carrusel-fotos {
     position: relative;
     width: 100%;
@@ -903,7 +891,6 @@ select {
     align-items: center;
     gap: 15px;
 }
-
 .ventana-fotos {
     width: 100%;
     overflow: hidden;
@@ -912,18 +899,15 @@ select {
     border: 2px solid rgba(255, 255, 255, 0.14);
     touch-action: pan-y;
 }
-
 .pista-fotos {
     display: flex;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .diapositiva-foto {
     flex: 0 0 100%;
     min-width: 100%;
     background: #000;
 }
-
 .diapositiva-foto img {
     width: 100%;
     height: auto;
@@ -931,20 +915,6 @@ select {
     object-fit: contain;
     cursor: zoom-in;
 }
-
-.flecha-foto {
-    flex-shrink: 0;
-    width: 48px;
-    height: 48px;
-    border: none;
-    border-radius: 50%;
-    background: var(--blanco);
-    color: var(--verde);
-    font-size: 22px;
-    cursor: pointer;
-    z-index: 5;
-}
-
 .ayuda-galeria {
     margin-top: 18px;
     text-align: center;
@@ -952,27 +922,22 @@ select {
     font-size: 13px;
 }
 
-
 /* =====================================================
-   BIBLIOTECA
+   BIBLIOTECA DIGITAL
 ===================================================== */
-
 .buscador {
     max-width: 850px;
     margin: 0 auto 40px;
 }
-
 .buscador input {
     width: 100%;
     padding: 17px 20px;
     border: 2px solid #1a5a32;
     border-radius: 10px;
-    outline: none;
-    background: #080d0a;
+    background: var(--negro-2);
     color: white;
     font-size: 16px;
 }
-
 .lista-libros {
     max-width: 1100px;
     margin: auto;
@@ -980,17 +945,15 @@ select {
     flex-direction: column;
     gap: 20px;
 }
-
 .libro {
     display: grid;
     grid-template-columns: 190px 1fr;
     gap: 25px;
     padding: 20px;
-    background: #080d0a;
+    background: var(--negro-2);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 15px;
 }
-
 .portada {
     width: 190px;
     min-height: 250px;
@@ -1001,45 +964,36 @@ select {
     border-radius: 10px;
     background: #000;
 }
-
 .portada img {
     width: 100%;
     height: auto;
-    object-fit: contain;
     cursor: zoom-in;
 }
-
 .libro-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
-
 .categoria {
     color: #63b77b;
     font-size: 11px;
     font-weight: bold;
     letter-spacing: 2px;
 }
-
 .libro h3 {
     font-size: 28px;
 }
-
 .libro-info p {
     color: #c1cbc5;
 }
-
 .descripcion {
     margin: 12px 0 20px;
 }
-
 .descargas {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-
 .boton-pdf {
     padding: 11px 16px;
     border-radius: 7px;
@@ -1047,22 +1001,18 @@ select {
     border: 1px solid rgba(255, 255, 255, 0.15);
     font-size: 13px;
 }
-
 .boton-pdf.secundario {
     background: #17251c;
 }
-
 .sin-resultados {
     display: none;
     padding: 50px 20px;
     text-align: center;
 }
 
-
 /* =====================================================
    MODAL
 ===================================================== */
-
 .modal {
     position: fixed;
     inset: 0;
@@ -1073,11 +1023,9 @@ select {
     padding: 20px;
     background: rgba(0, 0, 0, 0.96);
 }
-
 .modal.activo {
     display: flex;
 }
-
 .modal img {
     max-width: 96vw;
     max-height: 92vh;
@@ -1085,7 +1033,6 @@ select {
     height: auto;
     object-fit: contain;
 }
-
 .cerrar-modal {
     position: fixed;
     top: 18px;
@@ -1101,17 +1048,14 @@ select {
     z-index: 5001;
 }
 
-
 /* =====================================================
    FOOTER
 ===================================================== */
-
 footer {
     padding: 40px 5% 20px;
     background: #030504;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
-
 .pie-contenido {
     max-width: 1200px;
     margin: auto;
@@ -1119,16 +1063,13 @@ footer {
     justify-content: space-between;
     gap: 30px;
 }
-
 .pie-contenido h3 {
     color: #6fc185;
 }
-
 .pie-contenido p {
     color: #aeb9b2;
     font-size: 14px;
 }
-
 .derechos {
     max-width: 1200px;
     margin: 30px auto 0;
@@ -1139,295 +1080,10 @@ footer {
     font-size: 13px;
 }
 
-
 /* =====================================================
-   BIENVENIDA ZONA ESTUDIANTES
+   RESPONSIVE: MENÚ AJUSTADO (antes de pasar a hamburguesa)
 ===================================================== */
-
-.bienvenida-estudiantes {
-    position: relative;
-    min-height: 92vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    background: #031b0d;
-    color: #fff;
-    isolation: isolate;
-}
-
-
-/* =====================================================
-   FONDO
-===================================================== */
-
-.bienvenida-estudiantes-fondo {
-    position: absolute;
-    inset: 0;
-    z-index: -3;
-    background-image: url("Imagenes/Portada.jpg");
-    background-size: cover;
-    background-position: center;
-    transform: scale(1.03);
-}
-
-.bienvenida-estudiantes-overlay {
-    position: absolute;
-    inset: 0;
-    background:
-        linear-gradient(
-            90deg,
-            rgba(3, 27, 13, 0.97) 0%,
-            rgba(3, 27, 13, 0.88) 38%,
-            rgba(10, 61, 30, 0.70) 70%,
-            rgba(3, 27, 13, 0.82) 100%
-        );
-}
-
-
-/* =====================================================
-   CONTENIDO PRINCIPAL
-===================================================== */
-
-.bienvenida-estudiantes-contenido {
-    width: min(1200px, 92%);
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    align-items: center;
-    gap: 60px;
-    padding: 100px 0 80px;
-}
-
-
-/* =====================================================
-   TEXTO
-===================================================== */
-
-.bienvenida-estudiantes-texto {
-    max-width: 720px;
-    animation: bienvenidaEstudiantesEntrada 1s ease both;
-}
-
-.bienvenida-estudiantes-etiqueta {
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 8px 16px;
-    border-left: 3px solid var(--dorado);
-    background: rgba(255, 255, 255, 0.08);
-    color: var(--dorado-claro);
-    font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-}
-
-.bienvenida-estudiantes-texto h1 {
-    margin: 0 0 22px;
-    font-size: clamp(2.8rem, 6vw, 5.2rem);
-    line-height: 1.05;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.bienvenida-estudiantes-texto h1 span {
-    display: block;
-    color: var(--dorado);
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
-}
-
-.bienvenida-estudiantes-texto p {
-    max-width: 680px;
-    margin: 0 0 32px;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: 1.08rem;
-    line-height: 1.8;
-}
-
-
-/* =====================================================
-   BOTÓN
-===================================================== */
-
-.bienvenida-estudiantes-boton {
-    display: inline-flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 24px;
-    border: 1px solid var(--dorado);
-    border-radius: 6px;
-    background: var(--verde);
-    color: #fff;
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 700;
-    letter-spacing: 0.4px;
-    transition:
-        transform 0.3s ease,
-        background 0.3s ease,
-        color 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-.bienvenida-estudiantes-boton i {
-    color: var(--dorado-claro);
-    transition: transform 0.3s ease;
-}
-
-.bienvenida-estudiantes-boton:hover {
-    background: var(--dorado);
-    color: #031b0d;
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
-}
-
-.bienvenida-estudiantes-boton:hover i {
-    color: #031b0d;
-    transform: translateY(4px);
-}
-
-
-/* =====================================================
-   DECORACIÓN DERECHA
-===================================================== */
-
-.bienvenida-estudiantes-decoracion {
-    position: relative;
-    min-height: 420px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    animation: bienvenidaEstudiantesDecoracion 1.2s ease both;
-}
-
-.bienvenida-estudiantes-circulo {
-    position: absolute;
-    width: 330px;
-    height: 330px;
-    border: 1px solid rgba(212, 175, 55, 0.45);
-    border-radius: 50%;
-    box-shadow:
-        0 0 0 35px rgba(255, 255, 255, 0.025),
-        0 0 0 70px rgba(255, 255, 255, 0.018);
-    animation: bienvenidaEstudiantesPulso 5s ease-in-out infinite;
-}
-
-.bienvenida-estudiantes-icono {
-    position: relative;
-    z-index: 2;
-    width: 170px;
-    height: 170px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--dorado);
-    border-radius: 50%;
-    background: rgba(3, 27, 13, 0.72);
-    box-shadow:
-        0 0 40px rgba(212, 175, 55, 0.18),
-        inset 0 0 35px rgba(255, 255, 255, 0.04);
-}
-
-.bienvenida-estudiantes-icono i {
-    color: var(--dorado-claro);
-    font-size: 5rem;
-}
-
-.bienvenida-estudiantes-decoracion span {
-    position: relative;
-    z-index: 2;
-    margin-top: 42px;
-    color: rgba(255, 255, 255, 0.75);
-    font-size: 0.72rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-align: center;
-}
-
-
-/* =====================================================
-   INDICADOR DE SCROLL
-===================================================== */
-
-.bienvenida-estudiantes-scroll {
-    position: absolute;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    color: rgba(255, 255, 255, 0.72);
-    font-size: 0.65rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    animation: bienvenidaEstudiantesScroll 2s ease-in-out infinite;
-}
-
-.bienvenida-estudiantes-scroll i {
-    color: var(--dorado);
-    font-size: 1rem;
-}
-
-
-/* =====================================================
-   ANIMACIONES
-===================================================== */
-
-@keyframes bienvenidaEstudiantesEntrada {
-    from {
-        opacity: 0;
-        transform: translateX(-35px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes bienvenidaEstudiantesDecoracion {
-    from {
-        opacity: 0;
-        transform: translateX(35px) scale(0.94);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateX(0) scale(1);
-    }
-}
-
-@keyframes bienvenidaEstudiantesPulso {
-    0%,
-    100% {
-        transform: scale(1);
-        opacity: 0.75;
-    }
-
-    50% {
-        transform: scale(1.06);
-        opacity: 1;
-    }
-}
-
-@keyframes bienvenidaEstudiantesScroll {
-    0%,
-    100% {
-        transform: translate(-50%, 0);
-    }
-
-    50% {
-        transform: translate(-50%, 8px);
-    }
-}
-
-
-/* =====================================================
-   TABLET
-===================================================== */
-
-@media (max-width: 950px) {
+@media (max-width: 1050px) {
 
     nav a {
         padding: 8px;
@@ -1435,64 +1091,13 @@ footer {
     }
 }
 
+/* =====================================================
+   RESPONSIVE: TABLET (hasta 900px)
+   Aquí el menú pasa a hamburguesa
+===================================================== */
 @media (max-width: 900px) {
 
-    .bienvenida-estudiantes-contenido {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 30px;
-        padding-top: 100px;
-    }
-
-    .bienvenida-estudiantes-texto {
-        margin: 0 auto;
-    }
-
-    .bienvenida-estudiantes-etiqueta {
-        border-left: none;
-        border-bottom: 2px solid var(--dorado);
-    }
-
-    .bienvenida-estudiantes-texto p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .bienvenida-estudiantes-decoracion {
-        min-height: 260px;
-    }
-
-    .bienvenida-estudiantes-circulo {
-        width: 220px;
-        height: 220px;
-    }
-
-    .bienvenida-estudiantes-icono {
-        width: 120px;
-        height: 120px;
-    }
-
-    .bienvenida-estudiantes-icono i {
-        font-size: 3.5rem;
-    }
-
-    .bienvenida-estudiantes-decoracion span {
-        margin-top: 25px;
-    }
-
-    .objetos-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 22px;
-    }
-}
-
-
-/* =====================================================
-   CELULAR
-===================================================== */
-
-@media (max-width: 700px) {
-
+    /* Encabezado y menú */
     .encabezado {
         min-height: 68px;
         padding: 10px 4%;
@@ -1546,6 +1151,62 @@ footer {
         text-align: center;
     }
 
+    /* Bienvenida */
+    .bienvenida-estudiantes-contenido {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+        padding-top: 100px;
+    }
+
+    .bienvenida-estudiantes-texto {
+        margin: 0 auto;
+    }
+
+    .bienvenida-estudiantes-etiqueta {
+        border-left: none;
+        border-bottom: 2px solid var(--dorado);
+    }
+
+    .bienvenida-estudiantes-texto p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .bienvenida-estudiantes-decoracion {
+        min-height: 260px;
+    }
+
+    .bienvenida-estudiantes-circulo {
+        width: 220px;
+        height: 220px;
+    }
+
+    .bienvenida-estudiantes-icono {
+        width: 120px;
+        height: 120px;
+    }
+
+    .bienvenida-estudiantes-icono i {
+        font-size: 3.5rem;
+    }
+
+    .bienvenida-estudiantes-decoracion span {
+        margin-top: 25px;
+    }
+
+    /* Objetos perdidos */
+    .objetos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px;
+    }
+}
+
+/* =====================================================
+   RESPONSIVE: CELULAR (hasta 700px)
+===================================================== */
+@media (max-width: 700px) {
+
     .presentacion {
         min-height: auto;
         padding: 55px 4%;
@@ -1578,52 +1239,21 @@ footer {
         font-size: 30px;
     }
 
-
-    /* =================================================
-       CENTRO DE ESTUDIANTES - MÓVIL
-    ================================================= */
-
+    /* Centro de estudiantes: sin flechas, se desliza con el dedo */
     .carrusel-estudiantes {
         gap: 0;
-        width: 100%;
     }
 
-    /*
-       Las flechas desaparecen completamente
-       en celular.
-    */
-
-    .carrusel-estudiantes .flecha-carrusel,
-    #centroAnterior,
-    #centroSiguiente {
-        display: none !important;
+    .carrusel-estudiantes .flecha-carrusel {
+        display: none;
     }
 
     .ventana-carrusel-estudiantes {
-        width: 100%;
-        overflow: hidden;
-        touch-action: pan-y;
         cursor: grab;
     }
 
     .ventana-carrusel-estudiantes:active {
         cursor: grabbing;
-    }
-
-    .pista-carrusel-estudiantes {
-        display: flex;
-        transition:
-            transform 0.45s cubic-bezier(
-                0.4,
-                0,
-                0.2,
-                1
-            );
-    }
-
-    .diapositiva-estudiante {
-        flex: 0 0 100%;
-        min-width: 100%;
     }
 
     .tarjeta-estudiante {
@@ -1636,7 +1266,6 @@ footer {
     }
 
     .foto-estudiante img {
-        width: 100%;
         height: auto;
         min-height: 0;
         max-height: 65vh;
@@ -1652,21 +1281,13 @@ footer {
         font-size: 26px;
     }
 
-    .datos-estudiante {
-        width: 100%;
-        text-align: left;
-    }
-
+    .datos-estudiante,
     .mensaje-estudiante {
         width: 100%;
         text-align: left;
     }
 
-
-    /* =================================================
-       DESTACADOS
-    ================================================= */
-
+    /* Destacados */
     .destacado-card {
         grid-template-columns: 1fr;
     }
@@ -1676,11 +1297,7 @@ footer {
         text-align: center;
     }
 
-
-    /* =================================================
-       HORARIOS
-    ================================================= */
-
+    /* Horarios */
     .horario-box {
         padding: 20px 15px;
     }
@@ -1689,20 +1306,22 @@ footer {
         max-height: 75vh;
     }
 
-
-    /* =================================================
-       GALERÍA
-    ================================================= */
-
+    /* Galería */
     .carrusel-fotos {
         gap: 0;
     }
 
     .flecha-foto {
         position: absolute;
+        top: 50%;
         width: 40px;
         height: 40px;
         font-size: 17px;
+        transform: translateY(-50%);
+    }
+
+    .flecha-foto:hover {
+        transform: translateY(-50%) scale(1.08);
     }
 
     .foto-anterior {
@@ -1717,11 +1336,7 @@ footer {
         max-height: 75vh;
     }
 
-
-    /* =================================================
-       BIBLIOTECA
-    ================================================= */
-
+    /* Biblioteca */
     .libro {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1731,11 +1346,6 @@ footer {
     .portada {
         width: 100%;
         min-height: auto;
-    }
-
-    .portada img {
-        max-height: none;
-        width: 100%;
     }
 
     .libro-info {
@@ -1752,11 +1362,7 @@ footer {
         text-align: center;
     }
 
-
-    /* =================================================
-       OBJETOS PERDIDOS
-    ================================================= */
-
+    /* Objetos perdidos */
     .objetos-grid {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -1774,32 +1380,23 @@ footer {
         font-size: 1.25rem;
     }
 
-
-    /* =================================================
-       FOOTER
-    ================================================= */
-
+    /* Footer */
     .pie-contenido {
         flex-direction: column;
         text-align: center;
     }
 
-
-    /* =================================================
-       BIENVENIDA
-    ================================================= */
-
+    /* Bienvenida */
     .bienvenida-estudiantes {
         min-height: 100svh;
     }
 
     .bienvenida-estudiantes-overlay {
-        background:
-            linear-gradient(
-                180deg,
-                rgba(3, 27, 13, 0.94),
-                rgba(3, 27, 13, 0.82)
-            );
+        background: linear-gradient(
+            180deg,
+            rgba(3, 27, 13, 0.94),
+            rgba(3, 27, 13, 0.82)
+        );
     }
 
     .bienvenida-estudiantes-contenido {
@@ -1862,11 +1459,9 @@ footer {
     }
 }
 
-
 /* =====================================================
-   CELULARES PEQUEÑOS
+   RESPONSIVE: CELULARES PEQUEÑOS (hasta 380px)
 ===================================================== */
-
 @media (max-width: 380px) {
 
     .presentacion h2 {
@@ -1879,5 +1474,64 @@ footer {
 
     .bienvenida-estudiantes-texto h1 {
         font-size: 2.2rem;
+    }
+}
+
+/* =====================================================
+   ACCESIBILIDAD: reducir animaciones si el usuario lo pide
+===================================================== */
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* Animaciones de la bienvenida */
+@keyframes bienvenidaEstudiantesEntrada {
+    from {
+        opacity: 0;
+        transform: translateX(-35px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+@keyframes bienvenidaEstudiantesDecoracion {
+    from {
+        opacity: 0;
+        transform: translateX(35px) scale(0.94);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+@keyframes bienvenidaEstudiantesPulso {
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.75;
+    }
+    50% {
+        transform: scale(1.06);
+        opacity: 1;
+    }
+}
+@keyframes bienvenidaEstudiantesScroll {
+    0%,
+    100% {
+        transform: translate(-50%, 0);
+    }
+    50% {
+        transform: translate(-50%, 8px);
     }
 }
