@@ -2,25 +2,25 @@
    MENÚ RESPONSIVE
 ===================================================== */
 
-const menuBtn =
-    document.getElementById("menuBtn");
+const botonMenu =
+    document.getElementById("botonMenu");
 
-const navMenu =
-    document.getElementById("navMenu");
+const menuNavegacion =
+    document.getElementById("menuNavegacion");
 
 
-if (menuBtn && navMenu) {
+if (botonMenu && menuNavegacion) {
 
-    menuBtn.addEventListener(
+    botonMenu.addEventListener(
         "click",
         () => {
 
-            navMenu.classList.toggle("active");
+            menuNavegacion.classList.toggle("activo");
 
             const abierto =
-                navMenu.classList.contains("active");
+                menuNavegacion.classList.contains("activo");
 
-            menuBtn.textContent =
+            botonMenu.textContent =
                 abierto ? "✕" : "☰";
 
         }
@@ -30,18 +30,18 @@ if (menuBtn && navMenu) {
     /* CERRAR MENÚ AL TOCAR UNA OPCIÓN */
 
     document.querySelectorAll(
-        "#navMenu a"
-    ).forEach(link => {
+        "#menuNavegacion a"
+    ).forEach(enlace => {
 
-        link.addEventListener(
+        enlace.addEventListener(
             "click",
             () => {
 
-                navMenu.classList.remove(
-                    "active"
+                menuNavegacion.classList.remove(
+                    "activo"
                 );
 
-                menuBtn.textContent = "☰";
+                botonMenu.textContent = "☰";
 
             }
         );
@@ -55,50 +55,50 @@ if (menuBtn && navMenu) {
    CARRUSEL GENERAL
 ===================================================== */
 
-function crearCarrusel(config) {
+function crearCarrusel(configuracion) {
 
-    const track =
-        document.getElementById(config.track);
+    const pista =
+        document.getElementById(configuracion.track);
 
-    const windowElement =
-        document.getElementById(config.window);
+    const ventanaCarrusel =
+        document.getElementById(configuracion.window);
 
-    const prev =
-        document.getElementById(config.prev);
+    const botonAnterior =
+        document.getElementById(configuracion.prev);
 
-    const next =
-        document.getElementById(config.next);
+    const botonSiguiente =
+        document.getElementById(configuracion.next);
 
-    const dotsContainer =
-        document.getElementById(config.dots);
+    const contenedorPuntos =
+        document.getElementById(configuracion.dots);
 
 
-    if (!track || !windowElement) {
+    if (!pista || !ventanaCarrusel) {
         return;
     }
 
 
-    const slides =
-        track.children;
+    const diapositivas =
+        pista.children;
 
     const total =
-        slides.length;
+        diapositivas.length;
 
-    let index = 0;
+    let indice = 0;
 
-    let startX = 0;
+    let inicioX = 0;
 
-    let startY = 0;
+    let inicioY = 0;
 
-    let currentX = 0;
+    let actualX = 0;
 
-    let currentY = 0;
+    let actualY = 0;
 
-    let dragging = false;
+    let arrastrando = false;
 
-    let horizontalGesture = false;
+    let gestoHorizontal = false;
 
-    let autoTimer = null;
+    let temporizadorAuto = null;
 
 
     if (total === 0) {
@@ -110,9 +110,9 @@ function crearCarrusel(config) {
        CREAR PUNTOS
     ================================================= */
 
-    if (dotsContainer) {
+    if (contenedorPuntos) {
 
-        dotsContainer.innerHTML = "";
+        contenedorPuntos.innerHTML = "";
 
         for (
             let i = 0;
@@ -120,22 +120,22 @@ function crearCarrusel(config) {
             i++
         ) {
 
-            const dot =
+            const punto =
                 document.createElement("button");
 
-            dot.className =
-                "carousel-dot";
+            punto.className =
+                "punto-carrusel";
 
-            dot.setAttribute(
+            punto.setAttribute(
                 "aria-label",
                 `Ir a imagen ${i + 1}`
             );
 
-            dot.addEventListener(
+            punto.addEventListener(
                 "click",
                 () => {
 
-                    index = i;
+                    indice = i;
 
                     actualizar();
 
@@ -144,7 +144,7 @@ function crearCarrusel(config) {
                 }
             );
 
-            dotsContainer.appendChild(dot);
+            contenedorPuntos.appendChild(punto);
 
         }
 
@@ -157,21 +157,21 @@ function crearCarrusel(config) {
 
     function actualizar() {
 
-        track.style.transform =
-            `translateX(-${index * 100}%)`;
+        pista.style.transform =
+            `translateX(-${indice * 100}%)`;
 
 
-        if (dotsContainer) {
+        if (contenedorPuntos) {
 
-            const dots =
-                dotsContainer.children;
+            const puntos =
+                contenedorPuntos.children;
 
-            Array.from(dots).forEach(
-                (dot, i) => {
+            Array.from(puntos).forEach(
+                (punto, i) => {
 
-                    dot.classList.toggle(
-                        "active",
-                        i === index
+                    punto.classList.toggle(
+                        "activo",
+                        i === indice
                     );
 
                 }
@@ -188,11 +188,11 @@ function crearCarrusel(config) {
 
     function siguiente() {
 
-        index++;
+        indice++;
 
-        if (index >= total) {
+        if (indice >= total) {
 
-            index = 0;
+            indice = 0;
 
         }
 
@@ -207,11 +207,11 @@ function crearCarrusel(config) {
 
     function anterior() {
 
-        index--;
+        indice--;
 
-        if (index < 0) {
+        if (indice < 0) {
 
-            index = total - 1;
+            indice = total - 1;
 
         }
 
@@ -224,9 +224,9 @@ function crearCarrusel(config) {
        BOTÓN SIGUIENTE
     ================================================= */
 
-    if (next) {
+    if (botonSiguiente) {
 
-        next.addEventListener(
+        botonSiguiente.addEventListener(
             "click",
             () => {
 
@@ -244,9 +244,9 @@ function crearCarrusel(config) {
        BOTÓN ANTERIOR
     ================================================= */
 
-    if (prev) {
+    if (botonAnterior) {
 
-        prev.addEventListener(
+        botonAnterior.addEventListener(
             "click",
             () => {
 
@@ -265,29 +265,29 @@ function crearCarrusel(config) {
        CELULAR / TABLET
     ================================================= */
 
-    windowElement.addEventListener(
+    ventanaCarrusel.addEventListener(
         "touchstart",
-        e => {
+        evento => {
 
-            if (!e.touches || !e.touches[0]) {
+            if (!evento.touches || !evento.touches[0]) {
                 return;
             }
 
-            startX =
-                e.touches[0].clientX;
+            inicioX =
+                evento.touches[0].clientX;
 
-            startY =
-                e.touches[0].clientY;
+            inicioY =
+                evento.touches[0].clientY;
 
-            currentX =
-                startX;
+            actualX =
+                inicioX;
 
-            currentY =
-                startY;
+            actualY =
+                inicioY;
 
-            dragging = true;
+            arrastrando = true;
 
-            horizontalGesture = false;
+            gestoHorizontal = false;
 
         },
         {
@@ -296,31 +296,31 @@ function crearCarrusel(config) {
     );
 
 
-    windowElement.addEventListener(
+    ventanaCarrusel.addEventListener(
         "touchmove",
-        e => {
+        evento => {
 
             if (
-                !dragging ||
-                !e.touches ||
-                !e.touches[0]
+                !arrastrando ||
+                !evento.touches ||
+                !evento.touches[0]
             ) {
                 return;
             }
 
 
-            currentX =
-                e.touches[0].clientX;
+            actualX =
+                evento.touches[0].clientX;
 
-            currentY =
-                e.touches[0].clientY;
+            actualY =
+                evento.touches[0].clientY;
 
 
-            const differenceX =
-                currentX - startX;
+            const diferenciaX =
+                actualX - inicioX;
 
-            const differenceY =
-                currentY - startY;
+            const diferenciaY =
+                actualY - inicioY;
 
 
             /*
@@ -329,11 +329,11 @@ function crearCarrusel(config) {
              */
 
             if (
-                Math.abs(differenceX) >
-                Math.abs(differenceY)
+                Math.abs(diferenciaX) >
+                Math.abs(diferenciaY)
             ) {
 
-                horizontalGesture = true;
+                gestoHorizontal = true;
 
             }
 
@@ -344,20 +344,20 @@ function crearCarrusel(config) {
     );
 
 
-    windowElement.addEventListener(
+    ventanaCarrusel.addEventListener(
         "touchend",
         () => {
 
-            if (!dragging) {
+            if (!arrastrando) {
                 return;
             }
 
 
-            const differenceX =
-                currentX - startX;
+            const diferenciaX =
+                actualX - inicioX;
 
-            const differenceY =
-                currentY - startY;
+            const diferenciaY =
+                actualY - inicioY;
 
 
             /*
@@ -367,13 +367,13 @@ function crearCarrusel(config) {
              */
 
             if (
-                horizontalGesture &&
-                Math.abs(differenceX) > 50 &&
-                Math.abs(differenceX) >
-                Math.abs(differenceY)
+                gestoHorizontal &&
+                Math.abs(diferenciaX) > 50 &&
+                Math.abs(diferenciaX) >
+                Math.abs(diferenciaY)
             ) {
 
-                if (differenceX < 0) {
+                if (diferenciaX < 0) {
 
                     /* Deslizar hacia la izquierda */
                     siguiente();
@@ -388,9 +388,9 @@ function crearCarrusel(config) {
             }
 
 
-            dragging = false;
+            arrastrando = false;
 
-            horizontalGesture = false;
+            gestoHorizontal = false;
 
             reiniciarAutomatico();
 
@@ -401,13 +401,13 @@ function crearCarrusel(config) {
     );
 
 
-    windowElement.addEventListener(
+    ventanaCarrusel.addEventListener(
         "touchcancel",
         () => {
 
-            dragging = false;
+            arrastrando = false;
 
-            horizontalGesture = false;
+            gestoHorizontal = false;
 
         },
         {
@@ -420,44 +420,44 @@ function crearCarrusel(config) {
        ARRASTRE CON MOUSE
     ================================================= */
 
-    windowElement.addEventListener(
+    ventanaCarrusel.addEventListener(
         "mousedown",
-        e => {
+        evento => {
 
-            dragging = true;
+            arrastrando = true;
 
-            startX =
-                e.clientX;
+            inicioX =
+                evento.clientX;
 
-            currentX =
-                startX;
+            actualX =
+                inicioX;
 
         }
     );
 
 
-    windowElement.addEventListener(
+    ventanaCarrusel.addEventListener(
         "mousemove",
-        e => {
+        evento => {
 
-            if (!dragging) {
+            if (!arrastrando) {
                 return;
             }
 
-            currentX =
-                e.clientX;
+            actualX =
+                evento.clientX;
 
         }
     );
 
 
-    windowElement.addEventListener(
+    ventanaCarrusel.addEventListener(
         "mouseup",
         finalizarMouse
     );
 
 
-    windowElement.addEventListener(
+    ventanaCarrusel.addEventListener(
         "mouseleave",
         finalizarMouse
     );
@@ -465,20 +465,20 @@ function crearCarrusel(config) {
 
     function finalizarMouse() {
 
-        if (!dragging) {
+        if (!arrastrando) {
             return;
         }
 
 
-        const difference =
-            currentX - startX;
+        const diferencia =
+            actualX - inicioX;
 
 
         if (
-            Math.abs(difference) > 60
+            Math.abs(diferencia) > 60
         ) {
 
-            if (difference < 0) {
+            if (diferencia < 0) {
 
                 siguiente();
 
@@ -491,7 +491,7 @@ function crearCarrusel(config) {
         }
 
 
-        dragging = false;
+        arrastrando = false;
 
         reiniciarAutomatico();
 
@@ -505,17 +505,17 @@ function crearCarrusel(config) {
     function iniciarAutomatico() {
 
         if (
-            !config.automatico ||
+            !configuracion.automatico ||
             total <= 1
         ) {
             return;
         }
 
 
-        autoTimer =
+        temporizadorAuto =
             setInterval(
                 siguiente,
-                config.intervalo || 4500
+                configuracion.intervalo || 4500
             );
 
     }
@@ -523,12 +523,12 @@ function crearCarrusel(config) {
 
     function reiniciarAutomatico() {
 
-        if (!config.automatico) {
+        if (!configuracion.automatico) {
             return;
         }
 
 
-        clearInterval(autoTimer);
+        clearInterval(temporizadorAuto);
 
         iniciarAutomatico();
 
@@ -539,19 +539,19 @@ function crearCarrusel(config) {
        PAUSAR AL PASAR MOUSE
     ================================================= */
 
-    if (config.automatico) {
+    if (configuracion.automatico) {
 
-        windowElement.addEventListener(
+        ventanaCarrusel.addEventListener(
             "mouseenter",
             () => {
 
-                clearInterval(autoTimer);
+                clearInterval(temporizadorAuto);
 
             }
         );
 
 
-        windowElement.addEventListener(
+        ventanaCarrusel.addEventListener(
             "mouseleave",
             () => {
 
@@ -577,19 +577,19 @@ function crearCarrusel(config) {
 crearCarrusel({
 
     track:
-        "centroTrack",
+        "centroPista",
 
     window:
-        "centroWindow",
+        "centroVentana",
 
     prev:
-        "centroPrev",
+        "centroAnterior",
 
     next:
-        "centroNext",
+        "centroSiguiente",
 
     dots:
-        "centroDots",
+        "centroPuntos",
 
     automatico:
         false
@@ -604,19 +604,19 @@ crearCarrusel({
 crearCarrusel({
 
     track:
-        "galeriaTrack",
+        "galeriaPista",
 
     window:
-        "galeriaWindow",
+        "galeriaVentana",
 
     prev:
-        "galeriaPrev",
+        "galeriaAnterior",
 
     next:
-        "galeriaNext",
+        "galeriaSiguiente",
 
     dots:
-        "galeriaDots",
+        "galeriaPuntos",
 
     automatico:
         true,
@@ -631,7 +631,7 @@ crearCarrusel({
    HORARIOS
 ===================================================== */
 
-const cursoSelect =
+const selectorCurso =
     document.getElementById("curso");
 
 const horarioResultado =
@@ -735,14 +735,14 @@ const horarios = {
 };
 
 
-if (cursoSelect && horarioResultado) {
+if (selectorCurso && horarioResultado) {
 
-    cursoSelect.addEventListener(
+    selectorCurso.addEventListener(
         "change",
         () => {
 
             const curso =
-                cursoSelect.value;
+                selectorCurso.value;
 
 
             if (!curso) {
@@ -797,7 +797,7 @@ if (cursoSelect && horarioResultado) {
    MODAL DE IMÁGENES
 ===================================================== */
 
-const modal =
+const ventanaModal =
     document.getElementById(
         "modalImagen"
     );
@@ -813,18 +813,18 @@ const cerrarModal =
     );
 
 
-function abrirImagen(src) {
+function abrirImagen(ruta) {
 
-    if (!modal || !imagenModal) {
+    if (!ventanaModal || !imagenModal) {
         return;
     }
 
 
     imagenModal.src =
-        src;
+        ruta;
 
-    modal.classList.add(
-        "active"
+    ventanaModal.classList.add(
+        "activo"
     );
 
     document.body.style.overflow =
@@ -835,13 +835,13 @@ function abrirImagen(src) {
 
 function cerrarImagen() {
 
-    if (!modal || !imagenModal) {
+    if (!ventanaModal || !imagenModal) {
         return;
     }
 
 
-    modal.classList.remove(
-        "active"
+    ventanaModal.classList.remove(
+        "activo"
     );
 
     document.body.style.overflow =
@@ -870,14 +870,14 @@ if (cerrarModal) {
 }
 
 
-if (modal) {
+if (ventanaModal) {
 
-    modal.addEventListener(
+    ventanaModal.addEventListener(
         "click",
-        e => {
+        evento => {
 
             if (
-                e.target === modal
+                evento.target === ventanaModal
             ) {
 
                 cerrarImagen();
@@ -892,10 +892,10 @@ if (modal) {
 
 document.addEventListener(
     "keydown",
-    e => {
+    evento => {
 
         if (
-            e.key === "Escape"
+            evento.key === "Escape"
         ) {
 
             cerrarImagen();
@@ -915,11 +915,11 @@ function activarImagenes() {
     const imagenes =
         document.querySelectorAll(
             `
-            .student-photo img,
-            .photo-slide img,
+            .foto-estudiante img,
+            .diapositiva-foto img,
             .imagen-ampliable,
             .portada img,
-            .hero-image img,
+            .presentacion-imagen img,
             .destacado-image img
             `
         );
@@ -1041,9 +1041,9 @@ document.querySelectorAll("img")
 
         img.addEventListener(
             "dragstart",
-            e => {
+            evento => {
 
-                e.preventDefault();
+                evento.preventDefault();
 
             }
         );
@@ -1055,14 +1055,14 @@ document.querySelectorAll("img")
    PDF PARA APK / WEBVIEW
 ===================================================== */
 
-document.querySelectorAll(".btn-pdf")
+document.querySelectorAll(".boton-pdf")
     .forEach(boton => {
 
         boton.addEventListener(
             "click",
             function () {
 
-                const url =
+                const direccion =
                     this.href;
 
                 /*
@@ -1071,7 +1071,7 @@ document.querySelectorAll(".btn-pdf")
                  */
 
                 window.open(
-                    url,
+                    direccion,
                     "_blank"
                 );
 

@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zona Estudiantes | Col. J.F.B.</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="icon" type="image/png" href="imagenes/Escudo transparente.webp">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="script.js">
+    <link rel="stylesheet" href="estilos.css">
+   
 </head>
 
 <body>
@@ -16,7 +15,7 @@
 <!-- =====================================================
      HEADER / MENÚ
 ===================================================== -->
-<header class="header">
+<header class="encabezado">
     <div class="logo">
         <span>🎓</span>
         <div>
@@ -25,10 +24,10 @@
         </div>
     </div>
     <button
-        class="menu-btn" id="menuBtn" aria-label="Abrir menú">☰
+        class="boton-menu" id="botonMenu" aria-label="Abrir menú">☰
     </button>
 
-    <nav id="navMenu">
+    <nav id="menuNavegacion">
         <a href="#inicio">Inicio</a>
         <a href="#centro">Centro de Estudiantes</a>
         <a href="#destacados">Destacados</a>
@@ -38,14 +37,14 @@
         <a href="https://ce175170-bit.github.io/profes/">Zona Profesores</a>
 
         <!-- BOTÓN VOLVER A INICIO -->
-         <a href="https://ce175170-bit.github.io/1-INICIO/" class="nav-volver">
+         <a href="https://ce175170-bit.github.io/1-INICIO/" class="enlace-volver">
             <i class="fa-solid fa-house"></i> Volver a Inicio
         </a>
     </nav>
 </header>
 
 <!-- =====================================================
-     BIENVENIDA ZONA ESTUDIANTES
+     PORTADA
 ===================================================== -->
 <section class="bienvenida-estudiantes" id="bienvenida">
     <div class="bienvenida-estudiantes-fondo">
@@ -98,37 +97,37 @@
 <!-- =====================================================
      CENTRO DE ESTUDIANTES
 ===================================================== -->
-<section id="centro" class="section">
-    <div class="section-title">
+<section id="centro" class="seccion">
+    <div class="titulo-seccion">
         <h2>Centro de Estudiantes</h2>
         <p>
             Representación y participación estudiantil
         </p>
     </div>
-    <div class="student-carousel">
+    <div class="carrusel-estudiantes">
         <button
-            class="carousel-arrow prev"
-            id="centroPrev"
+            class="flecha-carrusel anterior"
+            id="centroAnterior"
             aria-label="Estudiante anterior">
             ❮
         </button>
-        <div class="student-carousel-window" id="centroWindow">
-            <div class="student-carousel-track" id="centroTrack">
+        <div class="ventana-carrusel-estudiantes" id="centroVentana">
+            <div class="pista-carrusel-estudiantes" id="centroPista">
 
                 <!-- ESTUDIANTE  -->
-                <div class="student-slide">
-                    <div class="student-card">
-                        <div class="student-photo">
+                <div class="diapositiva-estudiante">
+                    <div class="tarjeta-estudiante">
+                        <div class="foto-estudiante">
                             <img
                                 src="Imagenes/presi.jpeg"
                                 alt="Presidente del Centro de Estudiantes">
                         </div>
-                        <div class="student-info">
-                            <span class="student-label">
+                        <div class="info-estudiante">
+                            <span class="etiqueta-estudiante">
                                 CENTRO DE ESTUDIANTES
                             </span>
                             <h3>Jhon Joel Flores Chicchi</h3>
-                            <div class="student-data">
+                            <div class="datos-estudiante">
                                 <p>
                                     <strong>🎓 Cargo:</strong>
                                     Presidente
@@ -145,19 +144,19 @@
 
 
                 <!-- ESTUDIANTE 1 -->
-                <div class="student-slide">
-                    <div class="student-card">
-                        <div class="student-photo">
+                <div class="diapositiva-estudiante">
+                    <div class="tarjeta-estudiante">
+                        <div class="foto-estudiante">
                             <img
                                 src="Imagenes/uno.webp"
                                 alt="Vicepresidente del Centro de Estudiantes">
                         </div>
-                        <div class="student-info">
-                            <span class="student-label">
+                        <div class="info-estudiante">
+                            <span class="etiqueta-estudiante">
                                 CENTRO DE ESTUDIANTES
                             </span>
                             <h3>William Condori Zarate</h3>
-                            <div class="student-data">
+                            <div class="datos-estudiante">
                                 <p>
                                     <strong>🎓 Cargo:</strong>
                                     Vicepresidente
@@ -173,19 +172,19 @@
                 </div>
 
                 <!-- ESTUDIANTE 2 -->
-                <div class="student-slide">
-                    <div class="student-card">
-                        <div class="student-photo">
+                <div class="diapositiva-estudiante">
+                    <div class="tarjeta-estudiante">
+                        <div class="foto-estudiante">
                             <img
                                 src="Imagenes/dos.jpg"
                                 alt="Secretario de actas del Centro de Estudiantes">
                         </div>
-                        <div class="student-info">
-                            <span class="student-label">
+                        <div class="info-estudiante">
+                            <span class="etiqueta-estudiante">
                                 CENTRO DE ESTUDIANTES
                             </span>
                             <h3>Jairo Emerson Llanos Mamani</h3>
-                            <div class="student-data">
+                            <div class="datos-estudiante">
                                 <p>
                                     <strong>🎓 Cargo:</strong>
                                     Secretario de actas
@@ -201,19 +200,19 @@
                 </div>
 
                 <!-- ESTUDIANTE 3 -->
-                <div class="student-slide">
-                    <div class="student-card">
-                        <div class="student-photo">
+                <div class="diapositiva-estudiante">
+                    <div class="tarjeta-estudiante">
+                        <div class="foto-estudiante">
                             <img
                                 src="Imagenes/tres.webp"
                                 alt="Tesorera del Centro de Estudiantes">
                         </div>
-                        <div class="student-info">
-                            <span class="student-label">
+                        <div class="info-estudiante">
+                            <span class="etiqueta-estudiante">
                                 CENTRO DE ESTUDIANTES
                             </span>
                             <h3>Anali Bellido Callamullo</h3>
-                            <div class="student-data">
+                            <div class="datos-estudiante">
                                 <p>
                                     <strong>🎓 Cargo:</strong>
                                     Tesorera
@@ -229,19 +228,19 @@
                 </div>
 
                 <!-- ESTUDIANTE 3 -->
-                <div class="student-slide">
-                    <div class="student-card">
-                        <div class="student-photo">
+                <div class="diapositiva-estudiante">
+                    <div class="tarjeta-estudiante">
+                        <div class="foto-estudiante">
                             <img
                                 src="Imagenes/cuatro.webp"
                                 alt="Secretario del Centro de Estudiantes">
                         </div>
-                        <div class="student-info">
-                            <span class="student-label">
+                        <div class="info-estudiante">
+                            <span class="etiqueta-estudiante">
                                 CENTRO DE ESTUDIANTES
                             </span>
                             <h3>Mibia Yubiza Llanos Flores</h3>
-                            <div class="student-data">
+                            <div class="datos-estudiante">
                                 <p>
                                     <strong>🎓 Cargo:</strong>
                                     Sin cargo
@@ -257,19 +256,19 @@
                 </div>
 
                  <!-- ESTUDIANTE 3 -->
-                <div class="student-slide">
-                    <div class="student-card">
-                        <div class="student-photo">
+                <div class="diapositiva-estudiante">
+                    <div class="tarjeta-estudiante">
+                        <div class="foto-estudiante">
                             <img
                                 src="Imagenes/cinco.webp"
                                 alt="Secretario del Centro de Estudiantes">
                         </div>
-                        <div class="student-info">
-                            <span class="student-label">
+                        <div class="info-estudiante">
+                            <span class="etiqueta-estudiante">
                                 CENTRO DE ESTUDIANTES
                             </span>
                             <h3>David Angel Ruiz Martinez</h3>
-                            <div class="student-data">
+                            <div class="datos-estudiante">
                                 <p>
                                     <strong>🎓 Cargo:</strong>
                                     Sin cargo
@@ -289,20 +288,20 @@
         </div>
 
         <button
-            class="carousel-arrow next"
-            id="centroNext"
+            class="flecha-carrusel siguiente"
+            id="centroSiguiente"
             aria-label="Siguiente estudiante">
             ❯
         </button>
     </div>
-    <div class="carousel-dots" id="centroDots"></div>
+    <div class="puntos-carrusel" id="centroPuntos"></div>
 </section>
 
 <!-- =====================================================
      ESTUDIANTES DESTACADOS
 ===================================================== -->
-<section id="destacados" class="section dark-section">
-    <div class="section-title">
+<section id="destacados" class="seccion seccion-oscura">
+    <div class="titulo-seccion">
         <h2>Estudiantes Destacados</h2>
         <p>Reconocemos el esfuerzo y la dedicación</p>
     </div>
@@ -346,8 +345,8 @@
 <!-- =====================================================
      HORARIOS
 ===================================================== -->
-<section id="horarios" class="section">
-    <div class="section-title">  
+<section id="horarios" class="seccion">
+    <div class="titulo-seccion">  
         <h2>Horarios de Clases</h2>
         <p>Consulta el horario correspondiente a tu curso</p>
     </div>
@@ -395,94 +394,94 @@
 <!-- =====================================================
      GALERÍA DE FOTOS
 ===================================================== -->
-<section id="galeria" class="section dark-section">
-    <div class="section-title">       
+<section id="galeria" class="seccion seccion-oscura">
+    <div class="titulo-seccion">       
         <h2>Galería Estudiantil</h2>
         <p>
             Momentos y actividades de nuestra institución
         </p>
     </div>
-    <div class="photo-carousel">
+    <div class="carrusel-fotos">
         
-        <div class="photo-window" id="galeriaWindow">
-            <div class="photo-track" id="galeriaTrack">
+        <div class="ventana-fotos" id="galeriaVentana">
+            <div class="pista-fotos" id="galeriaPista">
                 
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen.jpg"
                         alt="Actividad escolar">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen1.jpg"
                         alt="Actividad educativa">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen2.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen3.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen4.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen5.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen6.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen7.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen8.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen9.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen10.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen11.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen12.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen13.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen14.jpg"
                         alt="Comunidad estudiantil">
                 </div>
-                <div class="photo-slide">
+                <div class="diapositiva-foto">
                     <img
                         src="fotos galeria/imagen15.jpg"
                         alt="Comunidad estudiantil">
@@ -491,8 +490,8 @@
         </div>
         
     </div>
-    <div class="carousel-dots" id="galeriaDots"></div>
-    <p class="gallery-help">
+    <div class="puntos-carrusel" id="galeriaPuntos"></div>
+    <p class="ayuda-galeria">
         👆 Haz clic en la imagen para verla en pantalla completa
     </p>
 </section>
@@ -500,8 +499,8 @@
 <!-- =====================================================
      OBJETOS PERDIDOS
 ===================================================== -->
-<section class="section objetos-section scroll-reveal" id="objetos-perdidos">
-    <div class="section-title">
+<section class="seccion objetos-section aparecer-scroll" id="objetos-perdidos">
+    <div class="titulo-seccion">
         <span>
             <i class="fa-solid fa-box-open"></i>
             OBJETOS PERDIDOS
@@ -569,8 +568,8 @@
 <!-- =====================================================
      BIBLIOTECA DIGITAL
 ===================================================== -->
-<section id="biblioteca" class="section">
-    <div class="section-title">   
+<section id="biblioteca" class="seccion">
+    <div class="titulo-seccion">   
         <h2>Biblioteca Digital</h2>
         <p>Busca libros por nombre o autor</p>
     </div>
@@ -607,7 +606,7 @@
                 <div class="descargas">
                     <a
                         href="documentos/CREACIÓN DE NUESTRO COLEGIO.pdf" target="_blank"                        
-                        class="btn-pdf">
+                        class="boton-pdf">
                         📥 Descargar PDF                        
                     </a>                     
                 </div>
@@ -639,7 +638,7 @@
                     <a
                         href="documentos/CREACIÓN DE LA BANDA DE GUERRA.pdf"
                         download
-                        class="btn-pdf">
+                        class="boton-pdf">
                         📥 Descargar PDF
                     </a> 
                 </div>
@@ -671,7 +670,7 @@
                     <a
                         href="documentos/HIMNO AL COLEGIO.pdf"
                         download
-                        class="btn-pdf">
+                        class="boton-pdf">
                         📥 Descargar PDF
                     </a> 
                 </div>
@@ -703,7 +702,7 @@
                     <a
                         href="documentos/REGLAMENTO INTERNO DEL COLEGIO BOHORQUEZ.pdf"
                         download
-                        class="btn-pdf">
+                        class="boton-pdf">
                         📥 Descargar PDF
                     </a> 
                 </div>
@@ -735,7 +734,7 @@
                     <a
                         href="documentos/los compas 2.pdf"
                         download
-                        class="btn-pdf">
+                        class="boton-pdf">
                         📥 Descargar PDF
                     </a> 
                 </div>
@@ -767,7 +766,7 @@
                     <a
                         href="documentos/quiero-ser-grande.pdf"
                         download
-                        class="btn-pdf">
+                        class="boton-pdf">
                         📥 Descargar PDF
                     </a> 
                 </div>
@@ -796,37 +795,37 @@
                 <div class="descargas">
                     <a
                         href="documentos/primero/1ro año de escolaridad [2025].pdf"
-                        download class="btn-pdf">
+                        download class="boton-pdf">
                         📥 Texto Principal</a>
                     <a
                         href="documentos/primero/Artes Plásticas y Visuales.pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 A. Plasticas
                     <a
                         href="documentos/primero/Cosmovisiones, Filosofía y Psicología.pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Filosofía - Psicología
                     <a
                         href="documentos/primero/Educación Musical.pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Música
                     <a
                         href="documentos/primero/Lengua Extranjera Inglés.pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Ingles
                     <a
                         href="documentos/primero/Técnica Tecnológica General.pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 T. Tecnología
                     <a
                         href="documentos/primero/Valores, Espiritualidades y Religiones.pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Religión
                     </a>
                 </div>
@@ -855,37 +854,37 @@
                 <div class="descargas">
                     <a
                         href="documentos/segundo/2do año de escolaridad [2025].pdf"
-                        download class="btn-pdf">
+                        download class="boton-pdf">
                         📥 Texto Principal</a>
                     <a
                         href="documentos/segundo/2do año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 A. Plasticas
                     <a
                         href="documentos/segundo/2do año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Filosofía - Psicología
                     <a
                         href="documentos/segundo/2do año de escolaridad - Educación Musical [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Música
                     <a
                         href="documentos/segundo/2do año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Ingles
                     <a
                         href="documentos/segundo/2do año de escolaridad - Técnica Tecnológica General [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 T. Tecnología
                     <a
                         href="documentos/segundo/2do año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Religión
                     </a>
                 </div>
@@ -914,37 +913,37 @@
                 <div class="descargas">
                     <a
                         href="documentos/tercero/3er año de escolaridad [2025].pdf"
-                        download class="btn-pdf">
+                        download class="boton-pdf">
                         📥 Texto Principal</a>
                     <a
                         href="documentos/tercero/3er año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 A. Plasticas
                     <a
                         href="documentos/tercero/3er año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Filosofía - Psicología
                     <a
                         href="documentos/tercero/3er año de escolaridad - Educación Musical [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Música
                     <a
                         href="documentos/tercero/3er año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Ingles
                     <a
                         href="documentos/tercero/3er año de escolaridad - Técnica Tecnológica General [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 T. Tecnología
                     <a
                         href="documentos/tercero/3er año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Religión
                     </a>
                 </div>
@@ -973,32 +972,32 @@
                 <div class="descargas">
                     <a
                         href="documentos/cuarto/4to año de escolaridad [2025].pdf"
-                        download class="btn-pdf">
+                        download class="boton-pdf">
                         📥 Texto Principal</a>
                     <a
                         href="documentos/cuarto/4to año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 A. Plasticas
                     <a
                         href="documentos/cuarto/4to año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Filosofía - Psicología
                     <a
                         href="documentos/cuarto/4to año de escolaridad - Educación Musical [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Música
                     <a
                         href="documentos/cuarto/4to año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Ingles                    
                     <a
                         href="documentos/cuarto/4to año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Religión
                     </a>
                 </div>
@@ -1027,32 +1026,32 @@
                 <div class="descargas">
                     <a
                         href="documentos/quinto/5to año de escolaridad [2025].pdf"
-                        download class="btn-pdf">
+                        download class="boton-pdf">
                         📥 Texto Principal</a>
                     <a
                         href="documentos/quinto/5to año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 A. Plasticas
                     <a
                         href="documentos/quinto/5to año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Filosofía - Psicología
                     <a
                         href="documentos/quinto/5to año de escolaridad - Educación Musical [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Música
                     <a
                         href="documentos/quinto/5to año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Ingles                    
                     <a
                         href="documentos/quinto/5to año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Religión
                     </a>
                 </div>
@@ -1081,32 +1080,32 @@
                 <div class="descargas">
                     <a
                         href="documentos/sexto/6to año de escolaridad [2025].pdf"
-                        download class="btn-pdf">
+                        download class="boton-pdf">
                         📥 Texto Principal</a>
                     <a
                         href="documentos/sexto/6to año de escolaridad - Artes Plásticas y Visuales [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 A. Plasticas
                     <a
                         href="documentos/sexto/6to año de escolaridad - Cosmovisiones, Filosofía y Psicología [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Filosofía - Psicología
                     <a
                         href="documentos/sexto/6to año de escolaridad - Educación Musical [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Música
                     <a
                         href="documentos/sexto/6to año de escolaridad - Lengua Extranjera Inglés [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Ingles                    
                     <a
                         href="documentos/sexto/6to año de escolaridad - Valores, Espiritualidades y Religiones [2025].pdf"
                         download
-                        class="btn-pdf secundario">
+                        class="boton-pdf secundario">
                         📄 Religión
                     </a>
                 </div>
@@ -1157,7 +1156,7 @@
                     <a
                         href="pdf/mio-cid.pdf"
                         download
-                        class="btn-pdf"
+                        class="boton-pdf"
                     >
                         📥 Descargar PDF
                     </a>
@@ -1165,7 +1164,7 @@
                     <a
                         href="pdf/mio-cid-1.pdf"
                         download
-                        class="btn-pdf secundario"
+                        class="boton-pdf secundario"
                     >
                         📄 PDF Alternativo
                     </a>
@@ -1213,7 +1212,7 @@
      FOOTER
 ===================================================== -->
 <footer>
-    <div class="footer-content">
+    <div class="pie-contenido">
         <div>
             <h3>Zona Estudiantes</h3>
             <p>Col. Juan Francisco Bohórquez</p>
@@ -1223,11 +1222,13 @@
             <p>Educación • Valores • Futuro</p>
         </div>
     </div>
-    <div class="copyright">
+    <div class="derechos">
         © 2026 Col. J.F.B. — JhonatanDM
     </div>
 </footer>
 
 <script src="script.js"></script>
+   <script src="documentos/MODIFICAR-AQUI.js" defer></script>
+   <script src="documentos/no-tocar.js" defer></script>
 </body>
 </html>
