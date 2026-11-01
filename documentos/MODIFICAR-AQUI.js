@@ -69,7 +69,7 @@ window.LIBROS = [
         alt: "Betanzos",
         palabras: "Betanzos",
         archivos: [
-            { texto: "📥 Descargar PDF", ruta: "documentos/historia-betanzos" }
+            { texto: "📥 Descargar PDF", ruta: "documentos/historia-betanzos.pdf" }
         ]
     },
 
