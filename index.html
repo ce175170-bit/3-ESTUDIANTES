@@ -29,9 +29,9 @@
 
         <nav id="menuNavegacion">
             <a href="#bienvenida">Inicio</a>
-            <a href="#centro">Centro de Estudiantes</a>
-            <a href="#destacados">Destacados</a>
+            <a href="#centro">Centro de Estudiantes</a>            
             <a href="#horarios">Horarios</a>
+            <a href="#emprendimientos">Emprendimientos</a>
             <a href="#galeria">Galería</a>
             <a href="#biblioteca">Biblioteca</a>
             <a href="https://ce175170-bit.github.io/profes/">Zona Profesores</a>
@@ -299,54 +299,8 @@
         <div class="puntos-carrusel" id="centroPuntos"></div>
     </section>
 
-    <!-- =====================================================
-        4° SECCION: ESTUDIANTES DESTACADOS
-    ===================================================== -->
-    <section 
-        id="destacados" class="seccion seccion-oscura">
-        <div class="titulo-seccion">
-            <h2>Estudiantes Destacados</h2>
-            <p>Reconocemos el esfuerzo y la dedicación</p>
-        </div>
-        <div class="destacado-card">
-            <div class="destacado-image">
-                <img
-                    src="Imagenes/mejores.webp"
-                    alt="Estudiantes destacados">
-            </div>
-            <div class="destacado-info">
-                <span class="reconocimiento">
-                    🏆 RECONOCIMIENTO
-                </span>
-                <h3>
-                    Nuestros estudiantes destacados
-                </h3>
-                <p class="nombres">
-                    1° Dahiana Michelle Checa Lupa <br>
-                    2° Mibia Yubiza Llanos Flores <br>               
-                    3° Nuestros estudiantes destacados
-                </p>
-                <h4>
-                    
-                </h4>
-                <p>
-                    “Hoy celebramos el esfuerzo, la dedicación y la 
-                    perseverancia de nuestros estudiantes destacados por 
-                    curso. Cada uno de sus logros es el resultado de horas de
-                    estudio, responsabilidad y el deseo de superarse cada día. 
-                    Este reconocimiento es para ustedes, porque con su esfuerzo nos
-                    demuestran que cada pequeño paso puede convertirse en un gran logro.” <br>
-                    🥇 <strong>Primer lugar: Curso 1° B</strong> Por su excelente desempeño y constancia. <br>
-                    🥈 <strong>Segundo lugar: Curso 3° A</strong> Por su dedicación y compromiso. <br>
-                    🥉 <strong>Tercer lugar:</strong> Por su perseverancia y espíritu de superación. <br>
-                    🌟 ¡Sigan adelante, porque cada esfuerzo de hoy construye el éxito de mañana!
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- =====================================================
-        5° SECCION: HORARIOS
+     <!-- =====================================================
+        4° SECCION: HORARIOS
     ===================================================== -->
     <section 
         id="horarios" class="seccion">
@@ -394,6 +348,23 @@
             </div>
         </div>
     </section>
+
+    <!-- =====================================================
+        5° SECCION: EMPRENDIMIENTOS
+    ===================================================== -->
+    <section 
+        class="seccion emprendimientos-seccion aparecer-scroll" id="emprendimientos">
+        <div class="emprendimientos-encabezado">
+            <h2>Emprendimientos y Proyectos de Jóvenes Bohorqueristas</h2>
+            <p>
+                Apoyemos la creatividad y el esfuerzo de nuestros estudiantes.
+                Cada compra y cada visita impulsan un sueño.
+            </p>
+        </div>
+
+        <!-- La lista se crea sola desde emprendimientos.js -->
+        <div class="emprendimientos-lista" id="listaEmprendimientos"></div>
+    </section>   
 
     <!-- =====================================================
         6° SECCION: GALERÍA DE FOTOS
@@ -1238,5 +1209,8 @@
     <script src="script.js"></script>
     <script src="documentos/MODIFICAR-AQUI.js" defer></script>
     <script src="documentos/no-tocar.js" defer></script>
+
+    <script src="emprende/MODIFICA-AQUI.js"></script>
+    <script src="emprende/no-tocar.js"></script>
 </body>
 </html>
