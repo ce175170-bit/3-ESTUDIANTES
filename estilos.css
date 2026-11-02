@@ -108,24 +108,50 @@ nav {
     align-items: center;
     gap: 3px;
 }
+
 nav a {
+    position: relative;               /* nuevo */
     padding: 10px 12px;
     border-radius: 7px;
     font-size: 16px;
     transition: 0.5s ease;
 }
-nav a:hover {
-    
-    color: #12f729;
+
+/* Línea verde (oculta al inicio) */
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 12px;                       /* mismo valor que el padding lateral */
+    right: 12px;
+    bottom: 4px;
+    height: 3px;
+    border-radius: 2px;
+    background: #63d98e;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
 }
 
-/* Botón volver a inicio */
+nav a:hover {
+    color: #63d98e;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Botón volver a inicio: sin línea */
 nav .enlace-volver {
     margin-left: 7px;
     background: var(--blanco);
     color: var(--verde);
     font-weight: bold;
 }
+
+nav .enlace-volver::after {
+    display: none;
+}
+
 nav .enlace-volver:hover {
     background: #dce8e0;
     color: #062a15;
