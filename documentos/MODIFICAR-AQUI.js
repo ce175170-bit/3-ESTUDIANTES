@@ -74,6 +74,19 @@ window.LIBROS = [
     },
 
     {
+        titulo: "El principito",
+        categoria: "Novela",
+        autor: "Antoine de Saint-Exupéry",
+        descripcion: "El Principito (1943), de Antoine de Saint-Exupéry, es una novela corta en forma de cuento filosófico. Un piloto cuyo avión se avería en el desierto del Sahara conoce a un niño misterioso, el Principito, que viene de un pequeño asteroide donde vive con una rosa a la que ama.",
+        portada: "Imagenes/principito.webp",
+        alt: "El principito",
+        palabras: "el principito",
+        archivos: [
+            { texto: "📥 Descargar PDF", ruta: "documentos/El principito.pdf" }
+        ]
+    },
+
+    {
         titulo: "Los compás 2",
         categoria: "Los compás 2",
         autor: "",
