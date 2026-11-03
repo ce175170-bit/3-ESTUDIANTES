@@ -37,6 +37,19 @@ window.EMPRENDIMIENTOS = [
         facebook: "",
         instagram: "",
         tiktok: ""
+    },  
+    
+    {
+        nombre: "Carniceria El mago",
+        estudiante: "Jhenny y Evelin",
+        curso: "6to B",
+        logo: "emprende/imagen/carne.webp",
+        descripcion: "🐖 Carnicería El Mago: ¡Tu carne de cerdo favorita, a un clic de distancia! Pide en línea y recibe frescura y calidad en la puerta de tu casa. 🪄",
+        whatsapp: "67933907",
+        web: "https://ce175170-bit.github.io/CARNICERIA/",
+        facebook: "",
+        instagram: "",
+        tiktok: ""
     }   
     
 
